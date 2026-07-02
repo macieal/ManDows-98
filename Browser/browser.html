@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser Explorer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../98.css-main/style.css">
+    <link rel="stylesheet" href="../98.css-main/docs/docs.css">
+    <link rel="stylesheet" href="../98.css-main/docs/vs.css">
+    <link rel="stylesheet" href="https://unpkg.com/98.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <li><a onclick="location.reload()"><button>Home</button></a></li>
+            <li><a onclick="history.back()"><button><-</button></a></li>
+            <li><a onclick="history.forward()"><button>-></button></a></li>
+            <li><a onclick="about()"><button>About</button></a></li>
+        </nav>
+    </header>
+    <iframe src="./WEBVIEW/Googu.html" id="browser" frameborder="0"></iframe>
+    <div id="about" style="display: none;">
+        <div class="title-bar">
+            <div class="title-bar-text">aboutbakexplorer.exe</div>
+            <div class="title-bar-controls">
+                <button aria-label="Close" onclick="closeAbout()">X</button>
+            </div>
+        </div>
+        
+        <h2>About This Browser</h2>
+        <p>This is a custom web browser built using HTML, CSS, and JavaScript. It features a simple interface with navigation buttons and an embedded iframe for displaying web content.</p>
+        <p>Created as part of the ManDows 98 project, this browser aims to provide a nostalgic browsing experience while showcasing modern web technologies.</p>
+        <p>Feel free to explore and customize it to your liking!</p>
+        <p>Developer: Maciel</p>
+        <p>This browser is iframe.</p>
+        <p>Version 0.1</p>
+    </div>
+    <script src="./browser.js"></script>
+</body>
+</html>

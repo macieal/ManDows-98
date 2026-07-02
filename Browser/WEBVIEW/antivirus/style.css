@@ -1,0 +1,9 @@
+@keyframes d { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+body{ cursor: url('../../../Windows98Scaled/win-95-98/arrow.cur'), auto; margin: 0; background-color: rgb(255, 255, 255); text-align: center; height: 100vh; }
+h1, h2, h3, h4, p, a{ cursor: url('../../../Windows98Scaled/win-95-98/arrow.cur'), auto; color: rgb(0, 0, 0); text-decoration: none; }
+img{ height: 10vh; width: 5vw; margin: auto; display: grid; }
+button{ align-items: center; place-items: center; text-align: center; display: grid; cursor: url('../../../Windows98Scaled/win-95-98/arrow.cur'), auto; }
+#antivariosjdown{ display: none; position: absolute; top: 10%; left: 75%; transform: translte(-50%, -50%); width: 20%; height: 15vh; background-color: rgb(255, 255, 255); border: solid black 1px; text-align: center; font-size: 1.2em; z-index: 100; overflow: hidden; }
+#animation-antivarios{ border-radius: 100%; position: absolute; top: 25%; left: 10%; transform: translate(-50%, -50%); width: 50px; height: 50px; background: linear-gradient(0deg, blue, black); animation: infinite d 2s; }
+#bolasquadradas{ align-items: center; display: grid; justify-content: center; }
+#antivariosj{ text-align: center; background-color: white; width: 30%; height: 55vh; border: solid 1px black; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: none; }

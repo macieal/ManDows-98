@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @keyframes windowenter {
+            0%{
+                opacity: 0%;
+            }
+            100%{
+                opacity: 100%;
+            }
+        }
+        @keyframes entertitle {
+            0%{
+                transform: translate(-50%, -50%);
+                font-size: 0;
+            }
+            100%{
+                font-size: 1vw;
+            }
+        }
+        @keyframes loading-error {
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        *{ cursor: url('../Windows98Scaled/win-95-98/arrow.cur'), auto; user-select: none; }
+        body{
+            margin: 0;
+            height: 100vh;
+        }
+        #window{
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgb(40, 40, 40);
+            animation: alternate 2s windowenter;
+            color: white;
+            font-family: Courier, monospace;
+            font-size: 1vw;
+        }
+        #s{ opacity: 50%; }
+        .welcome-title{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            animation: alternate 2s entertitle;
+        }
+        #loading{
+            position: absolute;
+            left: 100%;
+            top: 100%;
+            animation: infinite 1s loading-error;
+            transform: translate(-50%, -50%);
+        }
+        #window-error{
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgb(40, 40, 40);
+            color: white;
+            font-family: Courier, monospace;
+            font-size: 1vw;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="window">
+        <div class="welcome-title">
+            <h1>Hello Dune!</h1>
+            <h3 id="s">Welcome to your game.</h3>
+            <h4 id="loading">Loading...</h4>
+        </div>
+    </div>
+    <div id="window-error">
+        
+    </div>
+    <script>
+        setTimeout(() => {
+            document.body.style.backgroundSize = "cover";
+            document.body.style.backgroundImage = "url('./WEBVIEW/antivirus/b9f7f44f3ba0b6f7ba5a01b65ab76c10.png')";
+            document.getElementById("window").style.display = "none";
+            setTimeout(() => {
+                document.body.style.backgroundImage = "url('')";
+                document.getElementById("window-error").style.display = "block";
+                timer1()
+            }, 100);
+        }, 5000);
+        
+        function timer1(){
+        setTimeout(() => {
+            const w = document.getElementById("window-error");
+            
+            w.innerHTML = "<h1 style='color: green;'>[System] Game in development...</h1>";
+            setTimeout(() => {
+                w.innerHTML += "<h1 style='color: green;'>[System] installing packages...</h1>";
+                setTimeout(() => {
+                    w.innerHTML += "<h1 style='color: green;'>[System] Csharp installing in system...<h1>";
+                    setTimeout(() => {
+                        w.innerHTML += "<h1 style='color: red;'>[System] Error to install Csharp.<h1>";
+                            setTimeout(() => {
+                                w.innerHTML += "<h1 style='color: green;'>[System] Python installing in system...<h1>";
+                                    setTimeout(() => {
+                                        w.innerHTML += "<h1 style='color: red;'>[System] Error installing packages (Someone is watching you...)</h1>";
+                                        setTimeout(() => {
+                                            w.innerHTML += "<h1 style='color: red;'>[System] Error to create game.</h1>";
+                                            setTimeout(() => {
+                                                w.innerHTML += "<h1 style='color: red;'>[System] Antivarios gained access to the computer.</h1>";
+                                            }, 2000);
+                                            }, 2500);
+                                        }, 5000);
+                                    }, 1000);
+                            }, 2000);
+                    }, 1000);
+                }, 200);
+            }, 2000);
+        }   
+    </script>
+</body>
+</html>

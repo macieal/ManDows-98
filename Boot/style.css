@@ -1,0 +1,61 @@
+@font-face {
+  font-family: "VGA";
+  src: url("./PxPlus_IBM_VGA8.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+body{
+    margin: 0;
+    background-color: black;
+    color: white;
+    font-family:"VGA";
+    font-size: 1vw;
+    line-height: 1;
+    overflow: hidden;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    place-items: center;
+    text-align: center;
+}
+h2, h3, h4{
+    place-items: center;
+    text-align: center;
+    color: white;
+    background-color: black;
+    font-family:"VGA";
+    width: 100vw;
+}
+h2:hover{ color: rgb(0, 0, 0); background-color: white; } h3:hover{ color: rgb(0, 0, 0); background-color: white; } h4:hover{ color: rgb(0, 0, 0); background-color: white; }
+#about{
+    width: 100%;
+    height: 100vh;
+    background-color: blue;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    display: none;
+}
+.aboutwindow{
+    background-color: gray;
+    width: 50vw;
+    height: 50vh;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    box-shadow: 20px 20px 0px black;
+    text-align: center;
+    place-items: center;
+    display: grid;
+}
+#button{ color: black; width: 13vw; height: 2vw; }
+#button:hover{
+    background-color: blue;
+    width: 13vw;
+    height: 2vw;
+    color: yellow;  
+}
+#subtitle{ font-size: 2vw; }
+.t{ position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); }

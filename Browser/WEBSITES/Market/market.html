@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market</title>
+    <link rel="stylesheet" href="./98.css-main/style.css">
+    <link rel="stylesheet" href="./98.css-main/docs/docs.css">
+    <link rel="stylesheet" href="./98.css-main/docs/vs.css">
+    <link rel="stylesheet" href="https://unpkg.com/98.css">
+    <style>
+        *{ cursor: url("../../../Windows98Scaled/win-95-98/arrow.cur"), auto; }
+        body{
+            background-color: black;
+            text-align: center;
+            color: white; 
+        }
+        img{
+            width: 20vw;
+            height: 20vh;
+        }
+        #window-app{
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 15vw;
+            height: 15vh;
+            background-color: silver;
+            display: none;
+            color: black;
+            border: 0.1vw black;
+        }
+        button{ display: inline; list-style: none; }
+        #game{ background-color: gray; border: solid 0.1vw white; color: black; margin-top: 2vw; }
+    </style>
+</head>
+<body>
+    <div id="window-app">
+    <div class="title-bar">
+        <div class="title-bar-text">error.exe</div>
+        </div>
+    <div class="window-body">
+        <p>The game is not available.</p>
+    </div>
+    </div>
+
+    <h2>Market Games (developing)</h2>
+    <h3>Free Games</h3>
+
+    <div id="game">
+        <img src="./compare-original.png"></img>
+        <h3>Age of Empires</h3>
+        <button onclick="error()">Download</button>
+    </div>
+
+    <div id="game">
+        <img src="./doom.png"></img>
+        <h3>Doom</h3>
+        <button onclick="error()">Download</button>
+    </div>
+
+    <div id="game">
+        <img src="./half life.png"></img>
+        <h3>Half-Life</h3>
+        <button onclick="error()">Download</button>
+    </div>
+
+    <script>
+        function error()  {
+            document.getElementById("window-app").style.display = "block";
+            const audio = new Audio('../../songs/erro.mp3');
+	        audio.play();
+            setTimeout(() => {
+                document.getElementById("window-app").style.display = "none";
+            }, 2000);
+        }
+    </script>
+</body>
+</html>

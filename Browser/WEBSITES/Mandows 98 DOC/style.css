@@ -1,0 +1,22 @@
+body{ background-color: white; height: 170vh; }
+*{ cursor: url("../../../Windows98Scaled/win-95-98/arrow.cur"), auto; }
+.obras{
+    background-color: rgb(223, 223, 223);
+    width: 60vw;
+    height: 225vh;
+    position: absolute;
+    left: 50%;
+    top: 115%;
+    transform: translate(-50%, -50%);
+    color: black;
+    text-align: center;
+}
+.Mandows{ list-style: none; display: flex; position: fixed; left: 50%; top: 7%; transform: translate(-50%, -50%); }
+.a{
+    display: inline;
+    position: absolute;
+    left: 50%;
+    list-style: none;
+    transform: translate(-50%);
+    width: 50vw;
+}

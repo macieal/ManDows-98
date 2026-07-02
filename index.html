@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ManDows 98</title>
+    <link rel="shortcut icon" href="./Windows98Scaled/Windows98Scaled Icon 02.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./98.css-main/style.css">
+    <link rel="stylesheet" href="./98.css-main/docs/docs.css">
+    <link rel="stylesheet" href="./98.css-main/docs/vs.css">
+    <link rel="stylesheet" href="https://unpkg.com/98.css">
+    <style>
+    /* site que eu usei para fazer o estilo inteiro antigo https://jdan.github.io/98.css */
+    * { cursor: url('./Windows98Scaled/win-95-98/arrow.cur'), auto; user-select: none; box-sizing: border-box; padding: 0; }
+    body {
+        font-family: Arial, sans-serif;
+        display: grid;
+        height: 100vh;
+        margin: 0;
+        background-color: rgb(0,129,128);
+        cursor: url('./Windows98Scaled/win-95-98/arrow.cur'), auto;
+        background-position: 50% 50%;
+        overflow: hidden;
+    }
+    #showAfter {
+        nav-up: auto;
+        background: black;
+        color: white;
+        height: 100vh;
+        width: 100vw;
+        text-align: center;
+        display: grid;
+        place-items: center;
+        background-image: url(./Mandows.png);
+        background-size: cover;
+        background-position: center;
+        z-index: 10;
+        cursor: url('./Windows98Scaled/win-95-98/Invisible\ Cursor.cur'), auto;
+    }
+    #showAfterDown {
+        nav-up: auto;
+        background: black;
+        color: white;
+        height: 100vh;
+        width: 100vw;
+        text-align: center;
+        display: none;
+        place-items: center;
+        background-image: url(./Mandows.png);
+        background-size: cover;
+        background-position: center;
+        z-index: 10;
+        cursor: url('./Windows98Scaled/win-95-98/Invisible\ Cursor.cur'), auto;
+    }
+    #start {
+        width: 7vw;
+        height: 6vh;
+        font-size: 1vw;
+        position: absolute;
+        top: 94%;
+        left: 0%;
+        display: none;
+        background-image: url(./Windows98Scaled/start\ button.png);
+        background-size: 100% 100%;
+    }
+    #start-update {
+        width: 7vw;
+        height: 6vh;
+        font-size: 1vw;
+        position: absolute;
+        top: 94%;
+        left: 0%;
+        display: none;
+        background-image: url(./Windows98Scaled/start\ button.png);
+        background-size: 100% 100%;
+    }
+    #bar {
+        width: 100vw;
+        height: 6vh;
+        font-size: 1vw;
+        position: absolute;
+        top: 94%;
+        left: 0%;
+        display: none;
+        background-color: rgba(195, 195, 195);
+    }
+    #logar {
+        width: 10vw;
+        height: 6vh;
+        font-size: 1vw;
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: solid 0.1vw black;
+        font-size: 1vw;
+    }
+    #janela-login {
+        background: silver;
+        width: 40vh;
+        height: 50vh;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 1vw;
+        border: solid 0.1vw black;
+    }
+    .others-login { margin-top: 50px; }
+    #logar-update {
+        display: none;
+        width: 10vw;
+        height: 6vh;
+        font-size: 1vw;
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: solid 0.1vw black;
+        font-size: 1vw;
+    }
+    #janela-login-update {
+        display: none;
+        background: silver;
+        width: 40vh;
+        height: 50vh;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        place-items: center;
+        font-size: 1vw;
+        border: solid 0.1vw black;
+        box-shadow: 0px 0px 20px black;
+    }
+    #others-login-update {
+        display: none;
+        margin-top: 50px;
+    }
+    #menu {
+        nav-index: 99;
+        z-index: 99;
+        width: 20vw;
+        height: 50vh;
+        background-color: rgba(195, 195, 195);
+        position: absolute;
+        top: 44%;
+        left: 0.5%;
+        display: none;
+        border: solid 0.1vw black;
+        font-size: 1vw;
+        color: black;
+        text-align: center;
+    }
+    #menu-update {
+        nav-index: 99;
+        z-index: 99;
+        width: 20vw;
+        height: 50vh;
+        background-color: rgba(195, 195, 195);
+        position: absolute;
+        top: 44%;
+        left: 0.5%;
+        display: none;
+        border: solid 0.1vw black;
+        font-size: 1vw;
+        color: black;
+        text-align: center;
+    }
+    #closemenu {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(0, 0, 0);
+        display: none;
+        nav-index: -999;
+        z-index: 0;
+        opacity: 0%; 
+    }
+    .application {
+        position: absolute;
+        display: none;
+        width: 3vw;
+        height: 5.2vh;
+        margin: 15px;
+        text-align: center;
+        max-width: 100%;
+        max-height: 100%;
+    }
+    #info {
+        background-image: url("./Windows98Scaled/Windows98Scaled Icon 02.ico");
+        background-size: 100% 100%;
+        margin-left: 1.5vw;
+        z-index: 1;
+        nav-index: 1;
+        display: none;
+    }
+    #info-update {
+        background-image: url("./Windows98Scaled/Windows98Scaled Icon 02.ico");
+        background-size: 100% 100%;
+        margin-left: 1.5vw;
+        z-index: 1;
+        nav-index: 1;
+        display: none;
+    }
+    #info-icon-bar {
+        background-image: url("./Windows98Scaled/Windows98Scaled Icon 02.ico");
+        background-size: 75% 75%;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        z-index: 2;
+        nav-index: 2;
+        display: none;
+        width: 2.5vw;
+        height: 4vh;
+        box-shadow: 5px 5px 0px black;
+        background-color: grey;
+    }
+    #jia {
+        width: 30vw;
+        height: 40vh;
+        background-color: silver;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: solid 0.1vw black;
+        display: none;
+        text-align: center;
+        nav-index: 2;
+        z-index: 2;
+        overflow: auto;
+    }
+    .cji { margin-top: 20px; }
+    #fechar-jia {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 8%;
+        height: 5%;
+        font-size: 1vw;
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        border: solid 0.1vw black;
+        cursor: url('./Windows98Scaled/win-95-98/Cursor_15.cur'), auto;
+    }
+    #bauser {
+        background-image: url("./Windows98Scaled/Windows98Scaled Icon 04.ico");
+        background-size: 100% 100%;
+        margin-left: 1.5vw;
+        z-index: 1;
+        nav-index: 1;
+        position: absolute;
+        top: 30%;
+        left: 0%;
+        display: none;
+    }
+    #bauser-update {
+        background-image: url("./Windows98Scaled/Windows98Scaled Icon 04.ico");
+        background-size: 100% 100%;
+        margin-left: 1.5vw;
+        z-index: 1;
+        nav-index: 1;
+        position: absolute;
+        top: 30%;
+        left: 0%;
+        display: none;
+    }
+    #bauser-icon-bar {
+        background-image: url("./Windows98Scaled/Windows98Scaled Icon 04.ico");
+        background-size: 75% 75%;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        z-index: 2;
+        nav-index: 2;
+        display: none;
+        width: 2.5vw;
+        height: 4vh;
+        box-shadow: 5px 5px 0px black;
+        background-color: grey;
+    }
+    li { display: inline; }
+    h1, h2, h3, h4, p, a { cursor: url('./Windows98Scaled/win-95-98/arrow.cur'), auto; }
+    #jint {
+        width: 75vw;
+        height: 75vh;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: silver;
+        display: none;
+        nav-index: 1;
+        z-index: 1;
+        border: solid 0.1vw black;
+        text-align: center;
+        overflow: hidden;
+        overflow-x: hidden;
+    }
+    #browser {
+        width: 100%;
+        height: 74vh;
+        border: none;
+    }
+    #boras {
+        background-image: url("./Browser/WEBVIEW/antivirus/b9f7f44f3ba0b6f7ba5a01b65ab76c10.png");
+        background-size: 100% 100%;
+        margin-left: 1.5vw;
+        z-index: 1;
+        nav-index: 1;
+        position: absolute;
+        top: 75%;
+        left: 0%;
+        display: none;
+    }
+    #boras-icon-bar {
+        background-image: url("./Browser/WEBVIEW/antivirus/b9f7f44f3ba0b6f7ba5a01b65ab76c10.png");
+        background-size: 75% 75%;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        z-index: 2;
+        nav-index: 2;
+        display: none;
+        width: 2.5vw;
+        height: 4vh;
+        box-shadow: 5px 5px 0px black;
+        background-color: grey;
+    }
+    #boras-update {
+        background-image: url("./Browser/WEBVIEW/antivirus/b9f7f44f3ba0b6f7ba5a01b65ab76c10.png");
+        background-size: 100% 100%;
+        margin-left: 1.5vw;
+        z-index: 1;
+        nav-index: 1;
+        position: absolute;
+        top: 75%;
+        left: 0%;
+        display: none;
+    }
+    #boras-update-unlocker {
+        background-image: url("./Browser/WEBVIEW/antivirus/b9f7f44f3ba0b6f7ba5a01b65ab76c10.png");
+        background-size: 100% 100%;
+        margin-left: 1.5vw;
+        z-index: 1;
+        nav-index: 1;
+        position: absolute;
+        top: 75%;
+        left: 0%;
+        display: none;
+    }
+    #antivarios-assistent{ display: none; background-size: cover; background-image: url("./Browser/WEBVIEW/antivirus/b9f7f44f3ba0b6f7ba5a01b65ab76c10.png"); width: 5vw; height: 15vh; position: absolute; top: 50%; left: 7%; transform: translate(-50%, -50%); z-index: 9999999999999999999999999999999999999999999999999999999999999999; border: solid 0.1vw black; background-position: 50%, 50%; }
+    #noteped {
+        background-image: url("./Windows98Scaled/Windows98Scaled Icon 73.ico");
+        background-size: 100% 100%;
+        margin-left: 1.5vw;
+        z-index: 1;
+        nav-index: 1;
+        position: absolute;
+        top: 45%;
+        left: 0%;
+        display: none;
+    }
+    #noteped-update {
+        background-image: url("./Windows98Scaled/Windows98Scaled Icon 73.ico");
+        background-size: 100% 100%;
+        margin-left: 1.5vw;
+        z-index: 1;
+        nav-index: 1;
+        position: absolute;
+        top: 45%;
+        left: 0%;
+        display: none;
+    }
+    #noteped-icon-bar {
+        background-image: url("./Windows98Scaled/Windows98Scaled Icon 73.ico");
+        background-size: 75% 75%;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        z-index: 2;
+        nav-index: 2;
+        display: none;
+        width: 2.5vw;
+        height: 4vh;
+        box-shadow: 5px 5px 0px black;
+        background-color: grey;
+    }
+    #Terminal {
+        background-image: url("./Windows98Scaled/console_prompt-0.png");
+        background-size: 100% 100%;
+        margin-left: 1.5vw;
+        z-index: 1;
+        nav-index: 1;
+        position: absolute;
+        top: 60%;
+        left: 0%;
+        display: none;
+    }
+    #Terminal-update {
+        background-image: url("./Windows98Scaled/console_prompt-0.png");
+        background-size: 100% 100%;
+        margin-left: 1.5vw;
+        z-index: 1;
+        nav-index: 1;
+        position: absolute;
+        top: 60%;
+        left: 0%;
+        display: none;
+    }
+    #Terminal-icon-bar {
+        background-image: url("./Windows98Scaled/console_prompt-0.png");
+        background-size: 75% 75%;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        z-index: 2;
+        nav-index: 2;
+        display: none;
+        width: 2.5vw;
+        height: 4vh;
+        box-shadow: 5px 5px 0px black;
+        background-color: grey;
+    }
+    #lixo {
+        background-image: url("./Windows98Scaled/Windows98Scaled\ Icon\ 07.ico");
+        background-size: 100% 100%;
+        margin-left: 1.5vw;
+        z-index: 1;
+        nav-index: 1;
+        position: absolute;
+        top: 15%;
+        left: 0%;
+        display: none;
+    }
+    #lixo-icon-bar {
+        background-image: url("./Windows98Scaled/Windows98Scaled\ Icon\ 07.ico");
+        background-size: 75% 75%;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        z-index: 2;
+        nav-index: 2;
+        display: none;
+        width: 2.5vw;
+        height: 4vh;
+        box-shadow: 5px 5px 0px black;
+        background-color: grey;
+    }
+    #error404file {
+        background-image: url("./Windows98Scaled/Windows98Scaled\ Icon\ 73.ico");
+        background-size: 100% 100%;
+        margin-left: 1.5vw;
+        z-index: 1;
+        nav-index: 1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: none;
+    }
+    .win98wallpaper1 {
+        width: 15vw;
+        height: 15vh;
+        background-image: url("1353257.png");
+        background-size: 100% 100%;
+        z-index: 999;
+        margin: auto;
+        margin-top: 20px;
+    }
+    .win98wallpaper2 {
+        width: 15vw;
+        height: 15vh;
+        background-image: url("1353275.png");
+        background-size: 100% 100%;
+        z-index: 999;
+        margin: auto;
+        margin-top: 20px;
+    }
+    .win98wallpaper3 {
+        width: 15vw;
+        height: 15vh;
+        background-image: url("Ny9VbGloWUsucG5n.png");
+        background-size: 100% 100%;
+        z-index: 999;
+        margin: auto;
+        margin-top: 20px;
+    }
+    .win98wallpaper4 {
+        width: 15vw;
+        height: 15vh;
+        background-image: url("OTUuanBn.png");
+        background-size: 100% 100%;
+        z-index: 999;
+        margin: auto;
+        margin-top: 20px;
+    }
+    #bausermenu { width: 2.5vw; height: 5vh; position: absolute; left: 5%; top: 20%; background-image: url("./Windows98Scaled/Windows98Scaled Icon 04.ico"); background-size: 100% 100%; }
+    #bausermenu-update { width: 2.5vw; height: 5vh; position: absolute; left: 5%; top: 20%; background-image: url("./Windows98Scaled/Windows98Scaled Icon 04.ico"); background-size: 100% 100%; }
+    #infomenu { width: 2.5vw; height: 5vh; position: absolute; left: 5%; top: 50%; background-image: url("./Windows98Scaled/Windows98Scaled Icon 02.ico"); background-size: 100% 100%; }
+    #infomenu-update { width: 2.5vw; height: 5vh; position: absolute; left: 5%; top: 50%; background-image: url("./Windows98Scaled/Windows98Scaled Icon 02.ico"); background-size: 100% 100%; }
+    #customizationj { align-items: center; justify-items: center; text-align: center; width: 30vw; height: 40vh; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: silver; border: solid 0.1vw black; display: none; nav-index: 6; z-index: 6; overflow: auto; }
+    #BakExplorerMenuTitle { position: absolute; top: 0%; left: 100%; font-size: 1vw; color: black; }
+    #ComputerMenuTitle { position: absolute; top: 0%; left: 100%; font-size: 1vw; color: black; }
+    #explorer {
+        width: 90%;
+        height: 70vh;
+        display: none;
+        background-color: silver;
+        border: solid 0.1vw black;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        nav-index: 5;
+        z-index: 5;
+        text-align: center;
+        overflow: hidden;
+        font-size: 1vw;
+    }
+    #explorerfiles {
+        width: 70%;
+        height: 54vh;
+        margin: auto;
+        margin-top: 5px;
+    }
+    .controlexplorer {
+        display: inline-block;
+        position: absolute;
+        left: 50%;
+        top: 90%;
+        transform: translate(-50%, -50%);
+    }
+    #antivariosj {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 20vw;
+        height: 25vh;
+        background-color: silver;
+        transform: translate(-50%, -50%);
+        display: none;
+        text-align: center;
+        align-items: center;
+        nav-index: 3;
+        z-index: 3;
+        overflow: auto;
+        font-size: 1vw;
+        border: solid 0.1vw black;
+    }
+    #notepedj {
+        width: 50vw;
+        height: 50vh;
+        background-color: silver;
+        border: solid 0.1vw black;
+        display: none;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        nav-index: 2;
+        z-index: 2;
+        text-align: center;
+    }
+    #textarea-noteped {
+        cursor: url('./Windows98Scaled/win-95-98/arrow.cur'), auto;
+        width: 49vw;
+        height: 46vh;
+        position: absolute;
+        top: 52%;
+        left: 50%;
+        resize: none;
+        transform: translate(-50%, -50%);
+        border: solid 0.1vw black;
+    }
+    #notepedj-txt {
+        width: 50vw;
+        height: 50vh;
+        background-color: silver;
+        border: solid 0.1vw black;
+        display: none;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        nav-index: 9999999999999;
+        z-index: 999999999999999;
+        text-align: center;
+    }
+    #user {
+        position: absolute;
+        left: 50%;
+        top: 30%;
+        transform: translate(-50%, -50%);
+        background-image: url("./Windows98Scaled/d924360de4f32833422d87bd3ed4f277.png");
+        background-size: 100% 100%;
+        width: 5vw;
+        height: 9vh;
+        border: solid 0.2vw black;
+    }
+    #nameuser{ position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+    #TerminalJ {
+        background-color: silver;
+        width: 50vw;
+        height: 50vh;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 50%;
+        display: none;
+        nav-index: 9999999999999999999999;
+        z-index: 99999999999999999999;
+        border: solid 0.1vw black;
+        text-align: center;
+        overflow-y: hidden;
+    }
+    #trashJ{
+        background-color: silver;
+        width: 65vw;
+        height: 65vh;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 50%;
+        display: none;
+        nav-index: 9999999999999999999999;
+        z-index: 99999999999999999999;
+        border: solid 0.1vw black;
+        text-align: center;
+        overflow-y: hidden;
+        text-align: center;
+    }
+    #Terminal-Iframe {
+        border: none;
+        width: 50vw;
+        height: 48vh;
+    }
+    #error-j {
+        background-color: silver;
+        width: 20vw;
+        height: 40vh;
+        text-align: center;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        nav-index: 1;
+        z-index: 1;
+        display: none;
+        border: solid 0.1vw black;
+        overflow: auto;
+    }
+    #started-boot {
+        margin: 0;
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 12;
+        nav-index: 12;
+    }
+    #controlmenu {
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    #error-win-icon {
+        background-image: url('./Windows98Scaled/Windows98Scaled Icon 13.ico');
+        background-size: 100% 100%;
+        width: 3vw;
+        height: 7vh;
+        margin: auto;
+    }
+    #black-update { background-color: black; width: 100vw; height: 100vh; display: none; cursor: url('./Windows98Scaled/win-95-98/Invisible Cursor.cur'), auto; }
+    #update-info {
+        background-color: silver;
+        display: none;
+        width: 50vw;
+        height: 60vh;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border: 0.1vw solid black;
+        z-index: 50;
+        nav-index: 50;
+        text-align: center;
+        overflow: auto;
+    }
+    #javboras {
+        background-color: silver;
+        width: 30vw;
+        height: 30vh;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border: solid 0.1vw black;
+        text-align: center;
+        place-items: center;
+        display: none;
+        overflow-x: hidden;
+    }
+    #currentTime { position: absolute; left: 50%; top: 22.5%; transform: translate(-50%, -50%); color: black; font-size: 1.1vw; }
+    #currentTime-back { align-items: center; place-items: center; background-color: silver !important; position: absolute; top: 97%; right: -5%; transform: translate(-50%, -50%); width: 10vw; font-size: 1vw; height: 5vh; display: none; }
+    #AppUnlocker {
+        background-image: url("./Windows98Scaled/Windows98Scaled Icon 15.ico");
+        background-size: 100% 100%;
+        margin-left: 1.5vw;
+        z-index: 0;
+        nav-index: 0;
+        position: absolute;
+        left: 8%;
+        display: none;
+    }
+    #AppUnlocker-icon-bar {
+        background-image: url("./Windows98Scaled/Windows98Scaled Icon 15.ico");
+        background-size: 75% 75%;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        z-index: 2;
+        nav-index: 2;
+        display: none;
+        width: 2.5vw;
+        height: 4vh;
+        box-shadow: 5px 5px 0px black;
+        background-color: grey;
+    }
+    #auJ {
+        width: 35vw;
+        height: 35vh;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: silver;
+        display: none;
+        nav-index: 1;
+        z-index: 1;
+        border: solid 0.1vw black;
+        text-align: center;
+        overflow: hidden;
+        overflow-x: hidden;
+    }
+    #loading-antivarios-unlocked {
+        background-color: silver;
+        border: solid 0.1vw black;
+        width: 50vw;
+        height: 7vh;
+        text-align: center;
+        position: absolute;
+        left: 50%;
+        top: 90%;
+        transform: translate(-50%, -50%);
+        display: none;
+    }
+    #icon-unlocked-app { background-image: url("./Windows98Scaled/Windows98Scaled Icon 23.ico"); background-size: 100% 100%; width: 3vw; height: 6vh; display: inline; position: absolute; top: 50%; left: 10%; transform: translate(-50%, -50%); }
+    .icons-bar {
+        position: absolute;
+        left: 7%;
+        top: 50%;
+        transform: translate(0, -50%);
+        list-style: none;
+    }
+    #list-bar { margin-left: 0.3vw; display: inline-block; list-style: none; }
+    #minigame-antivarios123 { z-index: 100; display: none; width: 100vw; height: 100vh; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); border: none; }
+    #debug { color: white; display: none; z-index: 9999999999999999999999999999999999999999999999999999999999999999999999999999999999; place-items: center; text-align: center; background-color: gray; border: black solid 0.1vw; width: 90vw; height: 90vh; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+    #closedebug { position: absolute; right: 1%; top: 1%; }
+    #dialoguebar-antivarios { align-items: center; place-items: center; color: white; font-size: 1.5vw; position: fixed; transform: translate(-50%, -50%); top: 6%; left: 50%; border: none; background-color: black; width: 90%; height: 10vh; display: none; align-items: center; place-items: center; z-index: 9999999999; border-radius: 0.5vw; }
+    </style>
+</head>
+<body>
+    <button id="opendebug" style="display: none; position: absolute; right: 1%; top: 1%; z-index: 9999999999999999999999999999999999999999999999999999999999999999999999999999999999;" onclick="debugshow()">opendebug</button>
+    <div id="debug">
+        <h3>Debug</h3>
+        <button onclick="debughide()" style="position: absolute; right: 1%; top: 1%;">close</button>
+        <button onclick="showAfter()">showAfter</button>
+        <button onclick="showAfterDown()">showAfterDown</button>
+        <button onclick="areaDeTrabalho()">areaDeTrabalho</button>
+        <button onclick="closeareaDeTrabalho()">closeareaDeTrabalho</button>
+        <button onclick="error33123antivarios()">error33123antivarios</button>
+        <button onclick="openMenu()">openMenu</button>
+        <button onclick="closeMenu()">closeMenu</button>
+        <button onclick="openInfo()">openInfo</button>
+        <button onclick="closeJia()">closeJia</button>
+        <button onclick="bauser()">bauser</button>
+        <button onclick="closeJint()">closeJint</button>
+        <button onclick="openCustomization()">openCustomization</button>
+        <button onclick="closeCustomization()">closeCustomization</button>
+        <button onclick="win98wallpaper1()">win98wallpaper1</button>
+        <button onclick="win98wallpaper2()">win98wallpaper2</button>
+        <button onclick="win98wallpaper3()">win98wallpaper3</button>
+        <button onclick="win98wallpaper4()">win98wallpaper4</button>
+        <button onclick="windefaultwallpaper()">windefaultwallpaper</button>
+        <button onclick="openExplorer()">openExplorer</button>
+        <button onclick="closeExplorer()">closeExplorer</button>
+        <button onclick="antivariosjabrir()">antivariosjabrir</button>
+        <button onclick="closeVariosj()">closeVariosj</button>
+        <button onclick="varioscontinuar()">varioscontinuar</button>
+        <button onclick="openNotepedJ()">openNotepedJ</button>
+        <button onclick="closeNotepedJ()">closeNotepedJ</button>
+        <button onclick="openTerminalJ()">openTerminalJ</button>
+        <button onclick="closeTerminalJ()">closeTerminalJ</button>
+        <button onclick="updatemandows()">updatemandows</button>
+        <button onclick="updatemandows98login()">updatemandows98login</button>
+        <button onclick="closeuic()">closeuic</button>
+        <button onclick="areaDeTrabalhoUpdate()">areaDeTrabalhoUpdate</button>
+        <button onclick="antivariosjabrirerror()">antivariosjabrirerror</button>
+        <button onclick="closejavboras()">closejavboras</button>
+        <button onclick="openMenuUpdate()">openMenuUpdate</button>
+        <button onclick="closeareaDeTrabalhoUpdate()">closeareaDeTrabalhoUpdate</button>
+        <button onclick="showTime()">showTime</button>
+        <button onclick="bauserUpdate()">bauserUpdate</button>
+        <button onclick="AppUnlockerexecute()">AppUnlockerexecute</button>
+        <button onclick="antivariosjabrirunlocker()">antivariosjabrirunlocker</button>
+        <button onclick="closeauJ()">closeauJ</button>
+        <button onclick="antivariosjabrirboras()">antivariosjabrirboras</button>
+    </div>
+    
+    <div id="janela-login">
+        <div class="others-login">
+            <div id="user"></div>
+            <h3 id="nameuser">Dune</h3>
+        </div>
+    </div>
+    <button id="logar" onclick="areaDeTrabalho()" class="default">Login</button>
+
+    <div id="jia">
+        <div class="title-bar">
+                <div class="title-bar-text">computer.exe</div>
+                <div class="title-bar-controls">
+                <button aria-label="Close" onclick="closeJia()">X</button>
+            </div>
+        </div>  
+        <div class="cji">
+            <li><img src="./Windows98Scaled/Windows98Scaled Icon 02.ico" height="30px" width="30px"></img></li>
+            <li><h3>System Information</h3></li>
+            <li><h2>ManDows 98</h2></li>
+            <p>Creator: Maciel</p>
+            <header>
+                <nav>
+                    <li><button onclick="openExplorer()" class="default">explorer</button></li>
+                    <li><button onclick="openCustomization()" class="default">customization</button></li>
+                </nav>
+            </header>
+        </div>
+    </div>
+
+    <div id="customizationj" style="overflow-x: hidden;">
+        <div class="title-bar" style="width: 100%; margin: 0;">
+                <div class="title-bar-text">Customization.exe</div>
+                <div class="title-bar-controls">
+                <button aria-label="Close" onclick="closeCustomization()">X</button>
+            </div>
+        </div>
+        <div class="win98wallpaper1" onclick="win98wallpaper1()"></div>
+        <div class="win98wallpaper2" onclick="win98wallpaper2()"></div>
+        <div class="win98wallpaper3" onclick="win98wallpaper3()"></div>
+        <div class="win98wallpaper4" onclick="win98wallpaper4()"></div>
+        <button onclick="windefaultwallpaper()">Default Wallpaper</button>
+        <input style="display: inline-block;" type="color" id="picker">
+    </div>
+
+    <div id="explorer">
+        <div class="title-bar">
+            <div class="title-bar-text">Explorer.exe</div>
+            <div class="title-bar-controls">
+            <button aria-label="Close" onclick="closeExplorer()">X</button>
+        </div>
+    </div>
+        <div class="controlexplorer">
+            <button onclick="history.back()" class="default">< Back</button>
+            <button onclick="history.forward()" class="default">forward ></button>
+        </div>
+        <iframe src="./Explorer/index.html" frameborder="0" id="explorerfiles"></iframe>
+    </div>
+
+    <div id="notepedj">
+        <div class="title-bar">
+            <div class="title-bar-text">noteped.exe</div>
+            <div class="title-bar-controls">
+            <button aria-label="Close" onclick="closeNotepedJ()">X</button>
+            </div>
+        </div>
+        <textarea id="textarea-noteped" spellcheck="false"></textarea>
+    </div>
+
+    <div id="antivariosj">
+        <div class="title-bar">
+            <div class="title-bar-text">system.exe</div>
+            <div class="title-bar-controls">
+            <button aria-label="Close" onclick="closeVariosj()">X</button>
+        </div>
+    </div>
+        <h2>hey!</h2>
+        <h4>To access this app, you a password. EXPLORER-error233</h4>
+        <input id="antivarios-password" type="text" onkeydown="if(event.key==='Enter'){varioscontinuar()}" style="cursor: url('./Windows98Scaled/win-95-98/arrow.cur'), auto; margin: auto"></input>
+    </div>
+
+    <div id="jint">
+        <div class="title-bar">
+            <div class="title-bar-text">bakexplorer.exe</div>
+            <div class="title-bar-controls">
+            <button aria-label="Close" onclick="closeJint()" id="BakExplorerCloseButton">X</button>
+        </div>
+    </div>
+        <iframe src="./Browser/browser.html" frameborder="0" id="browser"></iframe>
+    </div>
+
+    <div id="TerminalJ">
+        <div class="title-bar">
+            <div class="title-bar-text">terminal.exe</div>
+            <div class="title-bar-controls">
+            <button aria-label="Close" onclick="closeTerminalJ()">X</button>
+        </div>
+    </div>
+        <iframe src="./Terminal/index.html" frameborder="0" id="Terminal-Iframe"></iframe>
+    </div>
+
+    <div id="error-j">
+        <div id="error-win-icon"></div>
+        <h3>Error 303</h3>
+        <h2>Our system detected something wrong.</h2>
+        <h3 id="updatetitle33123">Looking for updates...</h3>
+        <h3 id="updatetitlefoud" style="display: none;">update found!</h3>
+        <button onclick="updatemandows()" id="updatebutton33123antivarios" style="margin: auto; display: none;" class="default">Update</button>
+    </div>
+
+    <div id="trashJ">
+        <div class="title-bar">
+                <div class="title-bar-text">trash.exe</div>
+                <div class="title-bar-controls">
+                <button aria-label="Close" onclick="exitlixeiraJ()">X</button>
+            </div>
+        </div>
+        <h1 style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);">There's nothing here</h1>
+        <div id="error404file">
+            <div id="error404filetitle">YÑQ9YáY3³s1    i±yiÑy.txt</div>
+        </div>
+    </div>
+
+    <div id="lixo" class="application" onclick="openlixeiraJ()">
+        <h3 style="position: absolute; left: -0.2vw; top: 6vh; font-size: 1vw; color: white;">Trash</h3>
+    </div>
+
+    <div id="Terminal" class="application" onclick="openTerminalJ()">
+        <h3 style="position: absolute; left: -0.6vw; top: 6vh; font-size: 1vw; color: white;">Terminal</h3>
+    </div>
+
+    <div id="noteped" class="application" onclick="openNotepedJ()">
+        <h3 style="position: absolute; left: -0.5vw; top: 6vh; font-size: 1vw; color: white;">Noteped</h3>
+    </div>
+
+    <div id="boras" class="application" onclick="antivariosjabrir()">
+        <h3 style="position: absolute; left: -1.1vw; top: 6vh; font-size: 1vw; color: white;">Antivarios</h3>
+    </div>
+
+    <div id="info" class="application" onclick="openInfo()">
+        <h3 style="position: absolute; left: -1.1vw; top: 6vh; font-size: 1vw; color: white;">Computer</h3>
+    </div>
+
+    <div id="bauser" class="application" onclick="bauser()">
+        <h3 style="position: absolute; left: -1.1vw; top: 6vh; font-size: 1vw; color: white;">BakExplorer</h3>
+    </div>
+
+    <div id="closemenu" onclick="closeMenu()"></div>
+    <div id="menu">
+        <h3>Menu</h3>
+        <div id="bausermenu" onclick="bauser()">
+            <h3 id="BakExplorerMenuTitle">BakExplorer</h3>
+        </div>
+        <div id="infomenu" onclick="openInfo()">
+            <h3 id="ComputerMenuTitle">Computer</h3>
+        </div>
+        <header id="controlmenu">
+            <nav>
+                <button onclick="showAfterDown()" class="default">shutdown</button>
+                <button onclick="closeareaDeTrabalho()" class="default">exit</button>
+            </nav>
+        </header>
+    </div>
+
+    <div id="bar">
+        <div class="icons-bar">
+            <header>
+                <nav>
+                    <li id="list-bar"><div id="boras-icon-bar" onclick="closeVariosj()"></div></li>
+                    <li id="list-bar"><div id="Terminal-icon-bar" onclick="closeTerminalJ()"></div></li>
+                    <li id="list-bar"><div id="bauser-icon-bar" onclick="closeJint()"></div></li>
+                    <li id="list-bar"><div id="noteped-icon-bar" onclick="closeNotepedJ()"></div></li>
+                    <li id="list-bar"><div id="info-icon-bar" onclick="closeExplorer()
+                    closeJia()
+                    closeCustomization()"></div></li>
+                    <li id="list-bar"><div id="AppUnlocker-icon-bar" onclick="closeauJ()"></div></li>
+                    <li id="list-bar"><div id="lixo-icon-bar" onclick="exitlixeiraJ()"></div></li>
+                </nav>
+            </header>
+        </div>
+    </div>
+
+    <div id="currentTime-back" class="field-border">
+        <p id="currentTime"></p>
+    </div>
+
+    <button id="start" onclick="openMenu()"></button>
+
+    <iframe src="./Boot/index.html" frameborder="0" id="started-boot"></iframe>
+    <div id="black-update"></div>
+    <div id="showAfter"></div>
+    <div id="showAfterDown"></div>
+
+    <div id="update-info">
+        <div class="title-bar">
+            <div class="title-bar-text">Update.exe</div>
+            <div class="title-bar-controls">
+            <button aria-label="Close" onclick="closeuic()">X</button>
+        </div>
+    </div>
+
+        <h2>Information from the new update</h2>
+        <h3>1. Login screen changed</h3>
+        <h3>2. We now have a time display on the workspace</h3>
+        <h3>3. Bug fixes</h3>
+        <h3>4. 01001001 00100000 01110011 01100101 01100101 00100000 01111001 01101111 01110101 00100000 01101110 01101111 01110111</h3>
+        <h3>5. improved fireinthehole(security)</h3>
+        <h3>6. Power button removed >:(</h3>
+    </div>
+    <div id="janela-login-update">
+        <div id="others-login-update">
+            <div id="user"></div>
+            <h3 id="nameuser">Dune</h3>
+        </div>
+    </div>
+
+    <button id="logar-update" onclick="areaDeTrabalhoUpdate()" class="default">Login</button>
+
+    <div id="Terminal-update" class="application" onclick="openTerminalJ()">
+        <h3 style="position: absolute; left: -0.6vw; top: 6vh; font-size: 1vw; color: white;">Terminal</h3>
+    </div>
+
+    <div id="noteped-update" class="application" onclick="openNotepedJ()">
+        <h3 style="position: absolute; left: -0.5vw; top: 6vh; font-size: 1vw; color: white;">Noteped</h3>
+    </div>
+
+    <div id="boras-update" class="application" onclick="antivariosjabrirerror()">
+        <h3 style="position: absolute; left: -1.1vw; top: 6vh; font-size: 1vw; color: white;">Antivarios</h3>
+    </div>
+
+    <div id="boras-update-unlocker" class="application" onclick="antivariosjabrirboras()">
+        <h3 style="position: absolute; left: -1.1vw; top: 6vh; font-size: 1vw; color: white;">Antivarios</h3>
+    </div>
+
+    <div id="info-update" class="application" onclick="openInfo()">
+        <h3 style="position: absolute; left: -1.1vw; top: 6vh; font-size: 1vw; color: white;">Computer</h3>
+    </div>
+
+    <div id="bauser-update" class="application" onclick="bauserUpdate()">
+        <h3 style="position: absolute; left: -1.1vw; top: 6vh; font-size: 1vw; color: white;">BakExplorer</h3>
+    </div>
+
+    <div id="AppUnlocker" class="application" onclick="AppUnlockerexecute()">
+        <h3 style="position: absolute; left: -1.1vw; top: 6vh; font-size: 1vw; color: white;">AppUnlocker</h3>
+    </div>
+
+    <div id="auJ">
+        <div class="title-bar">
+            <div class="title-bar-text">appunlocker.exe</div>
+            <div class="title-bar-controls">
+                <button aria-label="Close" onclick="closeauJ()">X</button>
+            </div>
+        </div>
+        <h3>Please select application to unlock</h3>
+        <button onclick="antivariosjabrirunlocker()" id="buttonunlockedantivarios" class="default">Antivarios</button>
+        <button disabled class="default">Terminal</button>
+        <button disabled class="default">noteped</button>
+        <button disabled class="default">BakExplorer</button>
+    </div>
+
+    <div id="javboras">
+        <div class="title-bar" style="width: 100%;">
+            <div class="title-bar-text">antivarios.exe</div>
+            <div class="title-bar-controls">
+                <button aria-label="Close" onclick="closejavboras()">X</button>
+            </div>
+        </div>
+        <h4>Mandows detected a threat.</h4>
+        <h4>This program has been blocked!</h4>
+        <button onclick="closejavboras()" class="default">close</button>
+    </div>
+
+    <iframe src="./AntiVarios-MiniGame/index.html" frameborder="0" id="minigame-antivarios123"></iframe>
+
+    <button id="start-update" onclick="openMenuUpdate()"></button>
+
+    <div id="menu-update">
+        <h3>Menu</h3>
+        <div id="bausermenu-update" onclick="bauserUpdate()">
+            <h3 id="BakExplorerMenuTitle">BakExplorer</h3>
+        </div>
+        <div id="infomenu-update" onclick="openInfo()">
+            <h3 id="ComputerMenuTitle">Computer</h3>
+        </div>
+        <header id="controlmenu">
+            <nav>
+                <button onclick="closeareaDeTrabalhoUpdate()" class="default" id="exitbutton">exit</button>
+            </nav>
+        </header>
+    </div>
+    <div id="notepedj-txt">
+        <div class="title-bar">
+            <div class="title-bar-text">noteped.exe</div>
+            <div class="title-bar-controls">
+                <button aria-label="Close" onclick="closeNotepedJ()">X</button>
+            </div>
+        </div>
+        <textarea id="textarea-noteped" readonly spellcheck="false">
+???????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????
+???????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????
+???????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????
+???????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????
+???????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????
+???????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????
+???????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????
+???????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????
+???????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????
+???????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????
+???????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????
+???????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????
+???????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????
+???????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????
+???????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????
+???????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????
+???????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????
+???????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????
+???????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????
+???????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????
+???????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????
+???????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????
+01100001 01101110 01110100 01101001 01110110 01100001 01110010 01101001 01101111 01110011 00110001 00110010 00110011 01100101 01111000 01100101 01100011 01110101 01110100 01100101
+brawser terminal doc...?
+        </textarea>
+    </div>
+
+    <div id="antivarios-assistent"></div>
+    <div id="dialoguebar-antivarios"></div>
+
+    <div id="loading-antivarios-unlocked">
+        <div id="icon-unlocked-app"></div>
+        <h4 id="loadingantivarios-bar" style="display: block;">Unlocking the app...</h4>
+        <h4 id="loadingantivarios-success" style="display: none;">App unlocked successfully!</h4>
+    </div>
+
+    <script src="./index.js"></script>
+    <noscript style="background-color: white; height: 100vh; width: 100vw; text-align: center; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 9999999999999; align-items: center; display: grid;">Please enable JavaScript to continue playing.</noscript>
+</body>
+</html>
