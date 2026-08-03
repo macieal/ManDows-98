@@ -1,4 +1,6 @@
+showdebugbutton()
 console.log("Please leave so you don't cheat. >:(")
+
 document.addEventListener('contextmenu', event => event.preventDefault());
 	
 window.addEventListener("message", function(event) {
@@ -30,7 +32,7 @@ function showAfterDown() {
 	document.getElementById("closemenu").style.display = "none";
 	document.getElementById("info").style.display = "none";
 	document.getElementById("bauser").style.display = "none";
-	document.getElementById("lixo").style.display = "none";
+	document.getElementById("trash").style.display = "none";
 	document.getElementById("noteped").style.display = "none";
 	document.getElementById("Terminal").style.display = "none";
 	document.getElementById("boras").style.display = "none";
@@ -62,7 +64,7 @@ function areaDeTrabalho() {
 		document.getElementById("bauser").style.display = "block";
 		document.getElementById("noteped").style.display = "block";
 		document.getElementById("Terminal").style.display = "block";
-		document.getElementById("lixo").style.display = "block";
+		document.getElementById("trash").style.display = "block";
 	}, 1000);
 }
 
@@ -83,12 +85,20 @@ function closeareaDeTrabalho() {
 	document.getElementById("antivariosj").style.display = "none";
 	document.getElementById("explorer").style.display = "none";
 	document.getElementById("customizationj").style.display = "none";
-	document.getElementById("lixo").style.display = "none";
+	document.getElementById("trash").style.display = "none";
+	document.getElementById("trashJ").style.display = "none";
+	document.getElementById("list-bar").style.display = "none";
+	document.getElementById("jia").style.display = "none";
+	document.getElementById("boras-icon-bar").style.display = "none";
+	document.getElementById("Terminal-icon-bar").style.display = "none";
+	document.getElementById("bauser-icon-bar").style.display = "none";
+	document.getElementById("noteped-icon-bar").style.display = "none";
+	document.getElementById("info-icon-bar").style.display = "none";
+	document.getElementById("AppUnlocker-icon-bar").style.display = "none";
+	document.getElementById("trash-icon-bar").style.display = "none";
 }
 
 function error33123antivarios() {
-    document.getElementById("logar").style.display = "none";
-    document.getElementById("janela-login").style.display = "none";
     document.getElementById("start").style.display = "none";
 	document.getElementById("bar").style.display = "none";
 	document.getElementById("closemenu").style.display = "none";
@@ -97,8 +107,23 @@ function error33123antivarios() {
 	document.getElementById("noteped").style.display = "none";
 	document.getElementById("Terminal").style.display = "none";
 	document.getElementById("boras").style.display = "none";
+	document.getElementById("menu").style.display = "none";
+	document.getElementById("notepedj").style.display = "none";
+	document.getElementById("TerminalJ").style.display = "none";
 	document.getElementById("antivariosj").style.display = "none";
-	document.getElementById("lixo").style.display = "none";
+	document.getElementById("explorer").style.display = "none";
+	document.getElementById("customizationj").style.display = "none";
+	document.getElementById("trash").style.display = "none";
+	document.getElementById("trashJ").style.display = "none";
+	document.getElementById("list-bar").style.display = "none";
+	document.getElementById("jia").style.display = "none";
+	document.getElementById("boras-icon-bar").style.display = "none";
+	document.getElementById("Terminal-icon-bar").style.display = "none";
+	document.getElementById("bauser-icon-bar").style.display = "none";
+	document.getElementById("noteped-icon-bar").style.display = "none";
+	document.getElementById("info-icon-bar").style.display = "none";
+	document.getElementById("AppUnlocker-icon-bar").style.display = "none";
+	document.getElementById("trash-icon-bar").style.display = "none";
 	setTimeout(() => {
 		const audio = new Audio('./songs/erro.mp3');
 		audio.play();
@@ -158,9 +183,9 @@ function bauser() {
 }
 
 function closeJint() {
-	document.getElementById("browser").contentWindow.location.reload();
 	document.getElementById("bauser-icon-bar").style.display = "none";
 	document.getElementById("jint").style.display = "none";
+	document.getElementById("browser").contentWindow.location.reload();
 }
 
 window.addEventListener('message', function(event) {
@@ -317,7 +342,7 @@ function updatemandows98login() {
 	document.getElementById("bauser").style.display = "none";
 	document.getElementById("noteped").style.display = "none";
 	document.getElementById("Terminal").style.display = "none";
-	document.getElementById("lixo").style.display = "none";
+	document.getElementById("trash").style.display = "none";
 	document.getElementById("boras").style.display = "none";
 	document.getElementById("menu").style.display = "none";
 	document.getElementById("notepedj").style.display = "none";
@@ -338,7 +363,7 @@ function areaDeTrabalhoUpdate()  {
 	document.getElementById("logar-update").style.display = "none";
 	document.getElementById("others-login-update").style.display = "none";
 	setTimeout(() => {
-		document.getElementById("lixo").style.display = "block";
+		document.getElementById("trash").style.display = "block";
 		document.getElementById("boras-icon-bar").style.display = "none";
 		document.getElementById("Terminal-update").style.display = "block";
 		document.getElementById("noteped-update").style.display = "block";
@@ -381,7 +406,7 @@ function closeareaDeTrabalhoUpdate() {
 	document.getElementById("closemenu").style.display = "none";
 	document.getElementById("info-update").style.display = "none";
 	document.getElementById("bauser-update").style.display = "none";
-	document.getElementById("lixo").style.display = "none";
+	document.getElementById("trash").style.display = "none";
 	document.getElementById("noteped-update").style.display = "none";
 	document.getElementById("Terminal-update").style.display = "none";
 	document.getElementById("boras-update").style.display = "none";
@@ -422,14 +447,14 @@ function AppUnlockerexecute() {
 	document.getElementById("AppUnlocker-icon-bar").style.display = "block";
 }
 
-function openlixeiraJ() {
+function opentrashJ() {
 	document.getElementById("trashJ").style.display = "block";
-	document.getElementById("lixo-icon-bar").style.display = "block";
+	document.getElementById("trash-icon-bar").style.display = "block";
 }
 
-function exitlixeiraJ() {
+function exittrashJ() {
 	document.getElementById("trashJ").style.display = "none";
-	document.getElementById("lixo-icon-bar").style.display = "none";
+	document.getElementById("trash-icon-bar").style.display = "none";
 }
 
 function antivariosjabrirunlocker() {
@@ -519,7 +544,7 @@ function debughide() {
 }
 
 function blockedsystemusedupdate() {
-	document.getElementById("lixo").style.pointerEvents = "none";
+	document.getElementById("trash").style.pointerEvents = "none";
 	document.getElementById("Terminal-update").style.pointerEvents = "none";
 	document.getElementById("boras-update-unlocker").style.pointerEvents = "none";
 	document.getElementById("info-update").style.pointerEvents = "none";
@@ -531,7 +556,7 @@ function blockedsystemusedupdate() {
 }
 
 function unblockedsystemusedupdate() {
-	document.getElementById("lixo").style.pointerEvents = "none";
+	document.getElementById("trash").style.pointerEvents = "auto";
 	document.getElementById("Terminal-update").style.pointerEvents = "auto";
 	document.getElementById("boras-update-unlocker").style.pointerEvents = "auto";
 	document.getElementById("info-update").style.pointerEvents = "auto";
@@ -541,3 +566,11 @@ function unblockedsystemusedupdate() {
 	document.getElementById("start-update").style.pointerEvents = "auto";
 	document.getElementById("BakExplorerCloseButton").style.pointerEvents = "auto";
 }
+
+$( function() {
+  $( ".window" ).draggable({
+    handle: ".title-bar",
+	scroll: false,
+	cursor: "move"
+  });
+} );

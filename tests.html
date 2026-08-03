@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/98.css">
+</head>
+<body>
+    <style>
+        body{ background-color: gray; overflow: hidden; }
+        #menu {
+            z-index: 99;
+            width: 17vw;
+            height: 60vh;
+            background-color: rgba(195, 195, 195);
+            position: absolute;
+            top: 44%;
+            left: 0.5%;
+            border: solid 0.1vw black;
+            color: black;
+            overflow: hidden;
+            animation: alternate enter 1s;
+        }
+        #bordermenu{
+            position: absolute;
+            left: 0%;
+            top: 0%;
+            width: 10%;
+            height: 57vh;
+            background: linear-gradient(40deg, blue, rgb(0, 0, 128));
+        }
+        #bordermenutext{
+            width: 20vw;
+            color: white;
+            transform: rotate(-90deg);
+            position: absolute;
+            left: -525%;
+            top: 45%;
+            display: inline;
+            font-size: 1vw;
+        }
+        .selectmenu{ width: 100%; height: 9vh; background-color: rgb(189, 189, 189); margin-top: 10px; }
+        .selectmenu:hover{ background-color: rgb(0, 0, 190); color: white; }
+        @keyframes enter {
+            0%{
+            position: absolute;
+            top: 100%;
+            left: 0.5%;
+            }
+            100%{
+            position: absolute;
+            top: 44%;
+            left: 0.5%;
+            }
+        }
+        #bausermenu{ width: 3vw; height: 6vh; position: relative; left: 15%; top: 20%; background-image: url("./Windows98Scaled/Windows98Scaled Icon 04.ico"); background-size: 100% 100%; display: grid; align-items: center; place-items: center; }
+        #infomenu{ width: 3vw; height: 6vh; position: relative; left: 15%; top: 20%; background-image: url("./Windows98Scaled/Windows98Scaled Icon 02.ico"); background-size: 100% 100%; display: grid; align-items: center; place-items: center; }
+        #explorermenu{ width: 3vw; height: 6vh; position: relative; left: 15%; top: 20%; background-image: url("./Windows98Scaled/Windows98Scaled Icon 01.ico"); background-size: 100% 100%; display: grid; align-items: center; place-items: center; }
+        #logoffmenu{ width: 3vw; height: 6vh; position: relative; left: 15%; top: 20%; background-image: url("./Windows98Scaled/Windows98Scaled Icon 15.ico"); background-size: 100% 100%; display: grid; align-items: center; place-items: center; }
+        #shutdownmenu{ width: 3vw; height: 6vh; position: relative; left: 15%; top: 20%; background-image: url("./Windows98Scaled/Windows98Scaled Icon 17.ico"); background-size: 100% 100%; display: grid; align-items: center; place-items: center; }
+        #title-application-menu{ font-size: 20px; position: relative; left: 100%; top: -60%; transform: translate(-50%, -50%); font-size: 1.5vw; }
+    </style>
+    <div id="menu" class="window">
+        <div id="bordermenu">
+            <h4 id="bordermenutext">Mandows 98</h3>
+        </div>
+
+        <div class="selectmenu" onclick="bauser()">
+            <div id="bausermenu"></div>
+            <h4 id="title-application-menu">Brawser</h4>
+        </div>
+
+        <div class="selectmenu" onclick="openExplorer()">
+            <div id="explorermenu"></div>
+            <h4 id="title-application-menu">Explorer</h4>
+        </div>
+
+        <div class="selectmenu" onclick="openInfo()">
+            <div id="infomenu"></div>
+            <h4 id="title-application-menu">Info</h4>
+        </div>
+
+        <hr></hr>
+
+        <div class="selectmenu" onclick="closeareaDeTrabalho()">
+            <div id="logoffmenu"></div>
+            <h4 id="title-application-menu">Log Off</h4>
+        </div>
+
+        <div class="selectmenu" onclick="showAfterDown()">
+            <div id="shutdownmenu"></div>
+            <h4 id="title-application-menu">Shut Down</h4>
+        </div>
+    </div>
+</body>
+</html>
+
+<!--
+    <div id="closemenu" onclick="closeMenu()"></div>
+    <div id="menu">
+        <h3>Menu</h3>
+        <div id="bausermenu" onclick="bauser()">
+            <h3 id="BakExplorerMenuTitle">BakExplorer</h3>
+        </div>
+        <div id="infomenu" onclick="openInfo()">
+            <h3 id="ComputerMenuTitle">Computer</h3>
+        </div>
+        <header id="controlmenu">
+            <nav>
+                <button onclick="showAfterDown()" class="default">shutdown</button>
+                <button onclick="closeareaDeTrabalho()" class="default">exit</button>
+            </nav>
+        </header>
+    </div>
+-->

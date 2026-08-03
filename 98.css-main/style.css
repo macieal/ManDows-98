@@ -227,7 +227,6 @@ input[type="reset"]:disabled,
 
 .title-bar {
   z-index: 999999;
-  nav-index: 999999;
   background: linear-gradient(
     90deg,
     var(--dialog-blue),

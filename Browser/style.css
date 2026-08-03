@@ -27,7 +27,6 @@ a { text-decoration: none; color: white; cursor: url('../Windows98Scaled/win-95-
 button { cursor: url('../Windows98Scaled/win-95-98/arrow.cur'), auto; }
 #about{
     background-color: white;
-    nav-index: 100;
     z-index: 100;
     width: 70%;
     height: 70vh;

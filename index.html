@@ -9,17 +9,18 @@
     <link rel="stylesheet" href="./98.css-main/docs/docs.css">
     <link rel="stylesheet" href="./98.css-main/docs/vs.css">
     <link rel="stylesheet" href="https://unpkg.com/98.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.2/jquery-ui.js"></script>
     <style>
     /* site que eu usei para fazer o estilo inteiro antigo https://jdan.github.io/98.css */
     * { cursor: url('./Windows98Scaled/win-95-98/arrow.cur'), auto; user-select: none; box-sizing: border-box; padding: 0; }
     body {
-        font-family: Arial, sans-serif;
         display: grid;
-        height: 100vh;
         margin: 0;
         background-color: rgb(0,129,128);
         cursor: url('./Windows98Scaled/win-95-98/arrow.cur'), auto;
-        background-position: 50% 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
         overflow: hidden;
     }
     #showAfter {
@@ -29,7 +30,7 @@
         height: 100vh;
         width: 100vw;
         text-align: center;
-        display: grid;
+        display: block;
         place-items: center;
         background-image: url(./Mandows.png);
         background-size: cover;
@@ -138,36 +139,6 @@
         display: none;
         margin-top: 50px;
     }
-    #menu {
-        nav-index: 99;
-        z-index: 99;
-        width: 20vw;
-        height: 50vh;
-        background-color: rgba(195, 195, 195);
-        position: absolute;
-        top: 44%;
-        left: 0.5%;
-        display: none;
-        border: solid 0.1vw black;
-        font-size: 1vw;
-        color: black;
-        text-align: center;
-    }
-    #menu-update {
-        nav-index: 99;
-        z-index: 99;
-        width: 20vw;
-        height: 50vh;
-        background-color: rgba(195, 195, 195);
-        position: absolute;
-        top: 44%;
-        left: 0.5%;
-        display: none;
-        border: solid 0.1vw black;
-        font-size: 1vw;
-        color: black;
-        text-align: center;
-    }
     #closemenu {
         position: fixed;
         left: 0;
@@ -176,7 +147,6 @@
         height: 100vh;
         background-color: rgb(0, 0, 0);
         display: none;
-        nav-index: -999;
         z-index: 0;
         opacity: 0%; 
     }
@@ -195,7 +165,6 @@
         background-size: 100% 100%;
         margin-left: 1.5vw;
         z-index: 1;
-        nav-index: 1;
         display: none;
     }
     #info-update {
@@ -203,7 +172,6 @@
         background-size: 100% 100%;
         margin-left: 1.5vw;
         z-index: 1;
-        nav-index: 1;
         display: none;
     }
     #info-icon-bar {
@@ -212,7 +180,6 @@
         background-repeat: no-repeat;
         background-position: 50% 50%;
         z-index: 2;
-        nav-index: 2;
         display: none;
         width: 2.5vw;
         height: 4vh;
@@ -220,39 +187,20 @@
         background-color: grey;
     }
     #jia {
-        width: 30vw;
-        height: 40vh;
-        background-color: silver;
+        z-index: 9999999999999999;
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        border: solid 0.1vw black;
+        top: 25%;
+        left: 25%;
         display: none;
         text-align: center;
-        nav-index: 2;
         z-index: 2;
         overflow: auto;
-    }
-    .cji { margin-top: 20px; }
-    #fechar-jia {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 8%;
-        height: 5%;
-        font-size: 1vw;
-        background-color: rgb(255, 255, 255);
-        color: rgb(0, 0, 0);
-        border: solid 0.1vw black;
-        cursor: url('./Windows98Scaled/win-95-98/Cursor_15.cur'), auto;
     }
     #bauser {
         background-image: url("./Windows98Scaled/Windows98Scaled Icon 04.ico");
         background-size: 100% 100%;
         margin-left: 1.5vw;
         z-index: 1;
-        nav-index: 1;
         position: absolute;
         top: 30%;
         left: 0%;
@@ -263,7 +211,6 @@
         background-size: 100% 100%;
         margin-left: 1.5vw;
         z-index: 1;
-        nav-index: 1;
         position: absolute;
         top: 30%;
         left: 0%;
@@ -275,7 +222,6 @@
         background-repeat: no-repeat;
         background-position: 50% 50%;
         z-index: 2;
-        nav-index: 2;
         display: none;
         width: 2.5vw;
         height: 4vh;
@@ -285,24 +231,20 @@
     li { display: inline; }
     h1, h2, h3, h4, p, a { cursor: url('./Windows98Scaled/win-95-98/arrow.cur'), auto; }
     #jint {
-        width: 75vw;
-        height: 75vh;
+        z-index: 9999999999999999;
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        top: 10%;
+        left: 30%;
         background-color: silver;
         display: none;
-        nav-index: 1;
-        z-index: 1;
         border: solid 0.1vw black;
         text-align: center;
         overflow: hidden;
         overflow-x: hidden;
     }
     #browser {
-        width: 100%;
-        height: 74vh;
+        width: 65vw;
+        height: 72vh;
         border: none;
     }
     #boras {
@@ -310,7 +252,6 @@
         background-size: 100% 100%;
         margin-left: 1.5vw;
         z-index: 1;
-        nav-index: 1;
         position: absolute;
         top: 75%;
         left: 0%;
@@ -322,7 +263,6 @@
         background-repeat: no-repeat;
         background-position: 50% 50%;
         z-index: 2;
-        nav-index: 2;
         display: none;
         width: 2.5vw;
         height: 4vh;
@@ -334,7 +274,6 @@
         background-size: 100% 100%;
         margin-left: 1.5vw;
         z-index: 1;
-        nav-index: 1;
         position: absolute;
         top: 75%;
         left: 0%;
@@ -345,19 +284,17 @@
         background-size: 100% 100%;
         margin-left: 1.5vw;
         z-index: 1;
-        nav-index: 1;
         position: absolute;
         top: 75%;
         left: 0%;
         display: none;
     }
-    #antivarios-assistent{ display: none; background-size: cover; background-image: url("./Browser/WEBVIEW/antivirus/b9f7f44f3ba0b6f7ba5a01b65ab76c10.png"); width: 5vw; height: 15vh; position: absolute; top: 50%; left: 7%; transform: translate(-50%, -50%); z-index: 9999999999999999999999999999999999999999999999999999999999999999; border: solid 0.1vw black; background-position: 50%, 50%; }
+    #antivarios-assistent { display: none; background-size: cover; background-image: url("./Browser/WEBVIEW/antivirus/b9f7f44f3ba0b6f7ba5a01b65ab76c10.png"); width: 5vw; height: 15vh; position: absolute; top: 50%; left: 7%; transform: translate(-50%, -50%); z-index: 9999999999999999999999999999999999999999999999999999999999999999; border: solid 0.1vw black; background-position: 50%, 50%; }
     #noteped {
         background-image: url("./Windows98Scaled/Windows98Scaled Icon 73.ico");
         background-size: 100% 100%;
         margin-left: 1.5vw;
         z-index: 1;
-        nav-index: 1;
         position: absolute;
         top: 45%;
         left: 0%;
@@ -368,7 +305,6 @@
         background-size: 100% 100%;
         margin-left: 1.5vw;
         z-index: 1;
-        nav-index: 1;
         position: absolute;
         top: 45%;
         left: 0%;
@@ -380,7 +316,6 @@
         background-repeat: no-repeat;
         background-position: 50% 50%;
         z-index: 2;
-        nav-index: 2;
         display: none;
         width: 2.5vw;
         height: 4vh;
@@ -392,7 +327,6 @@
         background-size: 100% 100%;
         margin-left: 1.5vw;
         z-index: 1;
-        nav-index: 1;
         position: absolute;
         top: 60%;
         left: 0%;
@@ -403,7 +337,6 @@
         background-size: 100% 100%;
         margin-left: 1.5vw;
         z-index: 1;
-        nav-index: 1;
         position: absolute;
         top: 60%;
         left: 0%;
@@ -415,31 +348,28 @@
         background-repeat: no-repeat;
         background-position: 50% 50%;
         z-index: 2;
-        nav-index: 2;
         display: none;
         width: 2.5vw;
         height: 4vh;
         box-shadow: 5px 5px 0px black;
         background-color: grey;
     }
-    #lixo {
+    #trash {
         background-image: url("./Windows98Scaled/Windows98Scaled\ Icon\ 07.ico");
         background-size: 100% 100%;
         margin-left: 1.5vw;
         z-index: 1;
-        nav-index: 1;
         position: absolute;
         top: 15%;
         left: 0%;
         display: none;
     }
-    #lixo-icon-bar {
+    #trash-icon-bar {
         background-image: url("./Windows98Scaled/Windows98Scaled\ Icon\ 07.ico");
         background-size: 75% 75%;
         background-repeat: no-repeat;
         background-position: 50% 50%;
         z-index: 2;
-        nav-index: 2;
         display: none;
         width: 2.5vw;
         height: 4vh;
@@ -451,7 +381,6 @@
         background-size: 100% 100%;
         margin-left: 1.5vw;
         z-index: 1;
-        nav-index: 1;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -493,31 +422,95 @@
         margin: auto;
         margin-top: 20px;
     }
-    #bausermenu { width: 2.5vw; height: 5vh; position: absolute; left: 5%; top: 20%; background-image: url("./Windows98Scaled/Windows98Scaled Icon 04.ico"); background-size: 100% 100%; }
-    #bausermenu-update { width: 2.5vw; height: 5vh; position: absolute; left: 5%; top: 20%; background-image: url("./Windows98Scaled/Windows98Scaled Icon 04.ico"); background-size: 100% 100%; }
-    #infomenu { width: 2.5vw; height: 5vh; position: absolute; left: 5%; top: 50%; background-image: url("./Windows98Scaled/Windows98Scaled Icon 02.ico"); background-size: 100% 100%; }
-    #infomenu-update { width: 2.5vw; height: 5vh; position: absolute; left: 5%; top: 50%; background-image: url("./Windows98Scaled/Windows98Scaled Icon 02.ico"); background-size: 100% 100%; }
-    #customizationj { align-items: center; justify-items: center; text-align: center; width: 30vw; height: 40vh; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: silver; border: solid 0.1vw black; display: none; nav-index: 6; z-index: 6; overflow: auto; }
-    #BakExplorerMenuTitle { position: absolute; top: 0%; left: 100%; font-size: 1vw; color: black; }
-    #ComputerMenuTitle { position: absolute; top: 0%; left: 100%; font-size: 1vw; color: black; }
-    #explorer {
-        width: 90%;
-        height: 70vh;
-        display: none;
-        background-color: silver;
-        border: solid 0.1vw black;
+    #menu {
+        z-index: 99;
+        width: 17vw;
+        height: 60vh;
+        background-color: rgba(195, 195, 195);
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        nav-index: 5;
+        top: 44%;
+        left: 0.5%;
+        border: solid 0.1vw black;
+        color: black;
+        overflow: hidden;
+        animation: alternate enter 1s;
+        display: none;
+    }
+    #menu-update {
+        z-index: 99;
+        width: 17vw;
+        height: 60vh;
+        background-color: rgba(195, 195, 195);
+        position: absolute;
+        top: 44%;
+        left: 0.5%;
+        border: solid 0.1vw black;
+        color: black;
+        overflow: hidden;
+        animation: alternate enter 1s;
+        display: none;
+    }
+    #bordermenu{
+        position: absolute;
+        left: 0%;
+        top: 0%;
+        width: 10%;
+        height: 57vh;
+        background: linear-gradient(40deg, blue, rgb(0, 0, 128));
+    }
+    #bordermenutext{
+        width: 20vw;
+        color: white;
+        transform: rotate(-90deg);
+        position: absolute;
+        left: -580%;
+        top: 45%;
+        display: inline;
+        font-size: 1vw;
+    }
+    .selectmenu{ width: 100%; height: 9vh; background-color: rgb(189, 189, 189); margin-top: 10px; }
+    .selectmenu:hover{ background-color: rgb(0, 0, 190); color: white; }
+    @keyframes enter {
+        0%{
+        position: absolute;
+        top: 100%;
+        left: 0.5%;
+        }
+        100%{
+        position: absolute;
+        top: 44%;
+        left: 0.5%;
+        }
+    }
+    #bausermenu{ width: 3vw; height: 6vh; position: relative; left: 15%; top: 20%; background-image: url("./Windows98Scaled/Windows98Scaled Icon 04.ico"); background-size: 100% 100%; display: grid; align-items: center; place-items: center; }
+    #infomenu{ width: 3vw; height: 6vh; position: relative; left: 15%; top: 20%; background-image: url("./Windows98Scaled/Windows98Scaled Icon 02.ico"); background-size: 100% 100%; display: grid; align-items: center; place-items: center; }
+    #explorermenu{ width: 3vw; height: 6vh; position: relative; left: 15%; top: 20%; background-image: url("./Windows98Scaled/Windows98Scaled Icon 01.ico"); background-size: 100% 100%; display: grid; align-items: center; place-items: center; }
+    #logoffmenu{ width: 3vw; height: 6vh; position: relative; left: 15%; top: 20%; background-image: url("./Windows98Scaled/Windows98Scaled Icon 15.ico"); background-size: 100% 100%; display: grid; align-items: center; place-items: center; }
+    #shutdownmenu{ width: 3vw; height: 6vh; position: relative; left: 15%; top: 20%; background-image: url("./Windows98Scaled/Windows98Scaled Icon 17.ico"); background-size: 100% 100%; display: grid; align-items: center; place-items: center; }
+    #title-application-menu{ font-size: 20px; position: relative; left: 100%; top: -60%; transform: translate(-50%, -50%); font-size: 1.5vw; }
+    #customizationj {
+        align-items: center;
+        justify-items: center;
+        text-align: center;
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        display: none;
+        z-index: 6;
+    }
+    #explorer {
+        display: none;
+        position: absolute;
+        top: 20%;
+        left: 20%;
         z-index: 5;
         text-align: center;
         overflow: hidden;
         font-size: 1vw;
+        width: 1000px;
     }
     #explorerfiles {
-        width: 70%;
+        width: 80%;
         height: 54vh;
         margin: auto;
         margin-top: 5px;
@@ -533,37 +526,28 @@
         position: absolute;
         left: 50%;
         top: 50%;
-        width: 20vw;
-        height: 25vh;
-        background-color: silver;
-        transform: translate(-50%, -50%);
         display: none;
         text-align: center;
         align-items: center;
-        nav-index: 3;
         z-index: 3;
         overflow: auto;
         font-size: 1vw;
-        border: solid 0.1vw black;
+        width: 300px;
     }
     #notepedj {
-        width: 50vw;
-        height: 50vh;
-        background-color: silver;
-        border: solid 0.1vw black;
         display: none;
         position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        nav-index: 2;
+        left: 10%;
+        top: 10%;
         z-index: 2;
         text-align: center;
+        height: 50vh;
+        width: 50vw;
     }
     #textarea-noteped {
         cursor: url('./Windows98Scaled/win-95-98/arrow.cur'), auto;
-        width: 49vw;
-        height: 46vh;
+        width: 95%;
+        height: 45vh;
         position: absolute;
         top: 52%;
         left: 50%;
@@ -572,16 +556,12 @@
         border: solid 0.1vw black;
     }
     #notepedj-txt {
-        width: 50vw;
         height: 50vh;
-        background-color: silver;
-        border: solid 0.1vw black;
+        width: 50vw;
         display: none;
         position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        nav-index: 9999999999999;
+        left: 10%;
+        top: 10%;
         z-index: 999999999999999;
         text-align: center;
     }
@@ -598,35 +578,25 @@
     }
     #nameuser{ position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
     #TerminalJ {
-        background-color: silver;
-        width: 50vw;
-        height: 50vh;
         position: absolute;
-        transform: translate(-50%, -50%);
-        left: 50%;
-        top: 50%;
+        left: 10%;
+        top: 10%;
         display: none;
-        nav-index: 9999999999999999999999;
         z-index: 99999999999999999999;
-        border: solid 0.1vw black;
         text-align: center;
         overflow-y: hidden;
     }
     #trashJ{
-        background-color: silver;
-        width: 65vw;
-        height: 65vh;
         position: absolute;
-        transform: translate(-50%, -50%);
-        left: 50%;
-        top: 50%;
+        left: 25%;
+        top: 25%;
         display: none;
-        nav-index: 9999999999999999999999;
         z-index: 99999999999999999999;
-        border: solid 0.1vw black;
         text-align: center;
         overflow-y: hidden;
         text-align: center;
+        width: 40vw;
+        height: 40vh;
     }
     #Terminal-Iframe {
         border: none;
@@ -634,19 +604,14 @@
         height: 48vh;
     }
     #error-j {
-        background-color: silver;
-        width: 20vw;
-        height: 40vh;
         text-align: center;
-        transform: translate(-50%, -50%);
         position: absolute;
-        top: 50%;
-        left: 50%;
-        nav-index: 1;
+        top: 25%;
+        left: 25%;
         z-index: 1;
         display: none;
-        border: solid 0.1vw black;
         overflow: auto;
+        width: 250px;
     }
     #started-boot {
         margin: 0;
@@ -657,7 +622,6 @@
         top: 50%;
         transform: translate(-50%, -50%);
         z-index: 12;
-        nav-index: 12;
     }
     #controlmenu {
         position: absolute;
@@ -674,29 +638,20 @@
     }
     #black-update { background-color: black; width: 100vw; height: 100vh; display: none; cursor: url('./Windows98Scaled/win-95-98/Invisible Cursor.cur'), auto; }
     #update-info {
-        background-color: silver;
         display: none;
-        width: 50vw;
-        height: 60vh;
         position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        border: 0.1vw solid black;
+        left: 15%;
+        top: 15%;
         z-index: 50;
-        nav-index: 50;
         text-align: center;
         overflow: auto;
+        width: 500px;
+        height: 300px;
     }
     #javboras {
-        background-color: silver;
-        width: 30vw;
-        height: 30vh;
         position: absolute;
         left: 50%;
         top: 50%;
-        transform: translate(-50%, -50%);
-        border: solid 0.1vw black;
         text-align: center;
         place-items: center;
         display: none;
@@ -709,7 +664,6 @@
         background-size: 100% 100%;
         margin-left: 1.5vw;
         z-index: 0;
-        nav-index: 0;
         position: absolute;
         left: 8%;
         display: none;
@@ -720,7 +674,6 @@
         background-repeat: no-repeat;
         background-position: 50% 50%;
         z-index: 2;
-        nav-index: 2;
         display: none;
         width: 2.5vw;
         height: 4vh;
@@ -728,32 +681,24 @@
         background-color: grey;
     }
     #auJ {
-        width: 35vw;
-        height: 35vh;
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: silver;
         display: none;
-        nav-index: 1;
         z-index: 1;
-        border: solid 0.1vw black;
         text-align: center;
         overflow: hidden;
         overflow-x: hidden;
     }
     #loading-antivarios-unlocked {
-        background-color: silver;
-        border: solid 0.1vw black;
-        width: 50vw;
-        height: 7vh;
         text-align: center;
         position: absolute;
         left: 50%;
         top: 90%;
         transform: translate(-50%, -50%);
         display: none;
+        width: 20vw;
+        height: 10vh;
     }
     #icon-unlocked-app { background-image: url("./Windows98Scaled/Windows98Scaled Icon 23.ico"); background-size: 100% 100%; width: 3vw; height: 6vh; display: inline; position: absolute; top: 50%; left: 10%; transform: translate(-50%, -50%); }
     .icons-bar {
@@ -768,6 +713,7 @@
     #debug { color: white; display: none; z-index: 9999999999999999999999999999999999999999999999999999999999999999999999999999999999; place-items: center; text-align: center; background-color: gray; border: black solid 0.1vw; width: 90vw; height: 90vh; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
     #closedebug { position: absolute; right: 1%; top: 1%; }
     #dialoguebar-antivarios { align-items: center; place-items: center; color: white; font-size: 1.5vw; position: fixed; transform: translate(-50%, -50%); top: 6%; left: 50%; border: none; background-color: black; width: 90%; height: 10vh; display: none; align-items: center; place-items: center; z-index: 9999999999; border-radius: 0.5vw; }
+    #info-update-button { background-color: white; position: absolute; left: 1%; padding: 1vw; top: 1%; color: black; font-family: Arial, sans-serif; height: 200px; display: none; }
     </style>
 </head>
 <body>
@@ -826,14 +772,14 @@
     </div>
     <button id="logar" onclick="areaDeTrabalho()" class="default">Login</button>
 
-    <div id="jia">
+    <div id="jia" class="window">
         <div class="title-bar">
                 <div class="title-bar-text">computer.exe</div>
                 <div class="title-bar-controls">
                 <button aria-label="Close" onclick="closeJia()">X</button>
             </div>
-        </div>  
-        <div class="cji">
+        </div>
+        <div class="window-body" style="margin-top: 20px;">
             <li><img src="./Windows98Scaled/Windows98Scaled Icon 02.ico" height="30px" width="30px"></img></li>
             <li><h3>System Information</h3></li>
             <li><h2>ManDows 98</h2></li>
@@ -847,100 +793,123 @@
         </div>
     </div>
 
-    <div id="customizationj" style="overflow-x: hidden;">
+    <div id="customizationj" style="overflow-x: hidden;" class="window">
         <div class="title-bar" style="width: 100%; margin: 0;">
                 <div class="title-bar-text">Customization.exe</div>
                 <div class="title-bar-controls">
                 <button aria-label="Close" onclick="closeCustomization()">X</button>
             </div>
         </div>
-        <div class="win98wallpaper1" onclick="win98wallpaper1()"></div>
-        <div class="win98wallpaper2" onclick="win98wallpaper2()"></div>
-        <div class="win98wallpaper3" onclick="win98wallpaper3()"></div>
-        <div class="win98wallpaper4" onclick="win98wallpaper4()"></div>
-        <button onclick="windefaultwallpaper()">Default Wallpaper</button>
-        <input style="display: inline-block;" type="color" id="picker">
+        <div class="window-body">
+            <div class="win98wallpaper1" onclick="win98wallpaper1()"></div>
+            <div class="win98wallpaper2" onclick="win98wallpaper2()"></div>
+            <div class="win98wallpaper3" onclick="win98wallpaper3()"></div>
+            <div class="win98wallpaper4" onclick="win98wallpaper4()"></div>
+            <button onclick="windefaultwallpaper()">Default Wallpaper</button>
+            <input style="display: inline-block;" type="color" id="picker"></input>
+        </div>
     </div>
 
-    <div id="explorer">
+     <div id="explorer" class="window">
         <div class="title-bar">
             <div class="title-bar-text">Explorer.exe</div>
             <div class="title-bar-controls">
             <button aria-label="Close" onclick="closeExplorer()">X</button>
         </div>
     </div>
+    <div class="window-body">
         <div class="controlexplorer">
             <button onclick="history.back()" class="default">< Back</button>
             <button onclick="history.forward()" class="default">forward ></button>
         </div>
         <iframe src="./Explorer/index.html" frameborder="0" id="explorerfiles"></iframe>
     </div>
+    </div>
 
-    <div id="notepedj">
+    <div id="notepedj" class="window">
         <div class="title-bar">
             <div class="title-bar-text">noteped.exe</div>
             <div class="title-bar-controls">
-            <button aria-label="Close" onclick="closeNotepedJ()">X</button>
+                <button aria-label="Close" onclick="closeNotepedJ()">X</button>
             </div>
         </div>
-        <textarea id="textarea-noteped" spellcheck="false"></textarea>
+        <div class="window-body">
+            <textarea id="textarea-noteped" spellcheck="false"></textarea>
+        </div>
     </div>
 
-    <div id="antivariosj">
+    <div id="antivariosj" class="window">
         <div class="title-bar">
             <div class="title-bar-text">system.exe</div>
             <div class="title-bar-controls">
             <button aria-label="Close" onclick="closeVariosj()">X</button>
         </div>
     </div>
-        <h2>hey!</h2>
-        <h4>To access this app, you a password. EXPLORER-error233</h4>
-        <input id="antivarios-password" type="text" onkeydown="if(event.key==='Enter'){varioscontinuar()}" style="cursor: url('./Windows98Scaled/win-95-98/arrow.cur'), auto; margin: auto"></input>
+        <div class="window-body">
+            <h2>Hey!</h2>
+            <h4>To access this app, you a password. EXPLORER-error233</h4>
+            <input id="antivarios-password" type="text" onkeydown="if(event.key==='Enter'){varioscontinuar()}" style="cursor: url('./Windows98Scaled/win-95-98/arrow.cur'), auto; margin: auto"></input>
+        </div>
     </div>
 
-    <div id="jint">
+    <div id="jint" class="window">
         <div class="title-bar">
             <div class="title-bar-text">bakexplorer.exe</div>
             <div class="title-bar-controls">
-            <button aria-label="Close" onclick="closeJint()" id="BakExplorerCloseButton">X</button>
+                <button aria-label="Close" onclick="closeJint()" id="BakExplorerCloseButton">X</button>
+            </div>
+        </div>
+        <div class="window-body">
+            <iframe src="./Browser/browser.html" frameborder="0" id="browser"></iframe>
         </div>
     </div>
-        <iframe src="./Browser/browser.html" frameborder="0" id="browser"></iframe>
-    </div>
 
-    <div id="TerminalJ">
+    <div id="TerminalJ" class="window">
         <div class="title-bar">
             <div class="title-bar-text">terminal.exe</div>
             <div class="title-bar-controls">
             <button aria-label="Close" onclick="closeTerminalJ()">X</button>
         </div>
     </div>
-        <iframe src="./Terminal/index.html" frameborder="0" id="Terminal-Iframe"></iframe>
+        <div class="window-body">
+            <iframe src="./Terminal/index.html" frameborder="0" id="Terminal-Iframe"></iframe>
+        </div>
+    </div>
+    
+    <div id="error-j" class="window">
+        <div class="title-bar">
+            <div class="title-bar-text">system.exe</div>
+            <div class="title-bar-controls">
+            <button aria-label="Close" onclick="closeTerminalJ()" disabled>X</button>
+        </div>
+        </div>
+        <div class="window-body">
+            <div id="error-win-icon"></div>
+            <h3>Error 303</h3>
+            <h2>Our system detected something wrong.</h2>
+            <h3 id="updatetitle33123">Looking for updates...</h3>
+            <h3 id="updatetitlefoud" style="display: none;">update found!</h3>
+            <button onclick="updatemandows()" id="updatebutton33123antivarios" style="margin: auto; display: none;" class="default">Update</button>
+        </div>
     </div>
 
-    <div id="error-j">
-        <div id="error-win-icon"></div>
-        <h3>Error 303</h3>
-        <h2>Our system detected something wrong.</h2>
-        <h3 id="updatetitle33123">Looking for updates...</h3>
-        <h3 id="updatetitlefoud" style="display: none;">update found!</h3>
-        <button onclick="updatemandows()" id="updatebutton33123antivarios" style="margin: auto; display: none;" class="default">Update</button>
-    </div>
 
-    <div id="trashJ">
+    <div id="trashJ" class="window">
         <div class="title-bar">
                 <div class="title-bar-text">trash.exe</div>
                 <div class="title-bar-controls">
-                <button aria-label="Close" onclick="exitlixeiraJ()">X</button>
+                <button aria-label="Close" onclick="exittrashJ()">X</button>
             </div>
         </div>
-        <h1 style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);">There's nothing here</h1>
-        <div id="error404file">
-            <div id="error404filetitle">YÑQ9YáY3³s1    i±yiÑy.txt</div>
+        <div class="window-body">
+            <h1 style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);">There's nothing here</h1>
+            <div id="error404file">
+                <div id="error404filetitle">YÑQ9YáY3³s1    i±yiÑy.txt</div>
+            </div>
         </div>
     </div>
 
-    <div id="lixo" class="application" onclick="openlixeiraJ()">
+    <div id="trash" class="application" onclick="opentrashJ()">
         <h3 style="position: absolute; left: -0.2vw; top: 6vh; font-size: 1vw; color: white;">Trash</h3>
     </div>
 
@@ -965,20 +934,37 @@
     </div>
 
     <div id="closemenu" onclick="closeMenu()"></div>
-    <div id="menu">
-        <h3>Menu</h3>
-        <div id="bausermenu" onclick="bauser()">
-            <h3 id="BakExplorerMenuTitle">BakExplorer</h3>
+    <div id="menu" class="window">
+        <div id="bordermenu">
+            <h4 id="bordermenutext">Mandows 98</h3>
         </div>
-        <div id="infomenu" onclick="openInfo()">
-            <h3 id="ComputerMenuTitle">Computer</h3>
+
+        <div class="selectmenu" onclick="bauser()">
+            <div id="bausermenu"></div>
+            <h4 id="title-application-menu">Brawser</h4>
         </div>
-        <header id="controlmenu">
-            <nav>
-                <button onclick="showAfterDown()" class="default">shutdown</button>
-                <button onclick="closeareaDeTrabalho()" class="default">exit</button>
-            </nav>
-        </header>
+
+        <div class="selectmenu" onclick="openExplorer()">
+            <div id="explorermenu"></div>
+            <h4 id="title-application-menu">Explorer</h4>
+        </div>
+
+        <div class="selectmenu" onclick="openInfo()">
+            <div id="infomenu"></div>
+            <h4 id="title-application-menu">Info</h4>
+        </div>
+
+        <hr></hr>
+
+        <div class="selectmenu" onclick="closeareaDeTrabalho()">
+            <div id="logoffmenu"></div>
+            <h4 id="title-application-menu">Log Off</h4>
+        </div>
+
+        <div class="selectmenu" onclick="showAfterDown()">
+            <div id="shutdownmenu"></div>
+            <h4 id="title-application-menu">Shut Down</h4>
+        </div>
     </div>
 
     <div id="bar">
@@ -993,7 +979,7 @@
                     closeJia()
                     closeCustomization()"></div></li>
                     <li id="list-bar"><div id="AppUnlocker-icon-bar" onclick="closeauJ()"></div></li>
-                    <li id="list-bar"><div id="lixo-icon-bar" onclick="exitlixeiraJ()"></div></li>
+                    <li id="list-bar"><div id="trash-icon-bar" onclick="exittrashJ()"></div></li>
                 </nav>
             </header>
         </div>
@@ -1010,26 +996,28 @@
     <div id="showAfter"></div>
     <div id="showAfterDown"></div>
 
-    <div id="update-info">
+    <div id="update-info" class="window">
         <div class="title-bar">
             <div class="title-bar-text">Update.exe</div>
             <div class="title-bar-controls">
             <button aria-label="Close" onclick="closeuic()">X</button>
         </div>
     </div>
-
-        <h2>Information from the new update</h2>
-        <h3>1. Login screen changed</h3>
-        <h3>2. We now have a time display on the workspace</h3>
-        <h3>3. Bug fixes</h3>
-        <h3>4. 01001001 00100000 01110011 01100101 01100101 00100000 01111001 01101111 01110101 00100000 01101110 01101111 01110111</h3>
-        <h3>5. improved fireinthehole(security)</h3>
-        <h3>6. Power button removed >:(</h3>
+        <div class="window-body">
+            <h2>Information from the new update</h2>
+            <h3>1. Login screen changed</h3>
+            <h3>2. We now have a time display on the workspace</h3>
+            <h3>3. Bug fixes</h3>
+            <h3>4. 01001001 00100000 01110011 01100101 01100101 00100000 01111001 01101111 01110101 00100000 01101110 01101111 01110111</h3>
+            <h3>5. improved fireinthehole(security)</h3>
+            <h3>6. Power button removed >:(</h3>
+        </div>
     </div>
     <div id="janela-login-update">
         <div id="others-login-update">
             <div id="user"></div>
             <h3 id="nameuser">Dune</h3>
+            <div id="info-update-button">?</div>
         </div>
     </div>
 
@@ -1063,58 +1051,82 @@
         <h3 style="position: absolute; left: -1.1vw; top: 6vh; font-size: 1vw; color: white;">AppUnlocker</h3>
     </div>
 
-    <div id="auJ">
+    <div id="auJ" class="window">
         <div class="title-bar">
             <div class="title-bar-text">appunlocker.exe</div>
             <div class="title-bar-controls">
                 <button aria-label="Close" onclick="closeauJ()">X</button>
             </div>
         </div>
-        <h3>Please select application to unlock</h3>
-        <button onclick="antivariosjabrirunlocker()" id="buttonunlockedantivarios" class="default">Antivarios</button>
-        <button disabled class="default">Terminal</button>
-        <button disabled class="default">noteped</button>
-        <button disabled class="default">BakExplorer</button>
+        <div class="window-body">
+            <h3>Please select application to unlock</h3>
+            <button onclick="antivariosjabrirunlocker()" id="buttonunlockedantivarios" class="default">Antivarios</button>
+            <button disabled class="default">Terminal</button>
+            <button disabled class="default">noteped</button>
+            <button disabled class="default">BakExplorer</button>
+        </div>
     </div>
 
-    <div id="javboras">
-        <div class="title-bar" style="width: 100%;">
+    <div id="javboras" class="window">
+        <div class="title-bar">
             <div class="title-bar-text">antivarios.exe</div>
             <div class="title-bar-controls">
                 <button aria-label="Close" onclick="closejavboras()">X</button>
             </div>
         </div>
-        <h4>Mandows detected a threat.</h4>
-        <h4>This program has been blocked!</h4>
-        <button onclick="closejavboras()" class="default">close</button>
+        <div class="window-body">
+            <h4>Mandows detected a threat.</h4>
+            <h4>This program has been blocked!</h4>
+            <button onclick="closejavboras()" class="default">close</button>
+        </div>
     </div>
 
     <iframe src="./AntiVarios-MiniGame/index.html" frameborder="0" id="minigame-antivarios123"></iframe>
 
     <button id="start-update" onclick="openMenuUpdate()"></button>
 
-    <div id="menu-update">
-        <h3>Menu</h3>
-        <div id="bausermenu-update" onclick="bauserUpdate()">
-            <h3 id="BakExplorerMenuTitle">BakExplorer</h3>
+    <div id="menu" class="window">
+        <div id="bordermenu">
+            <h4 id="bordermenutext">Mandows 98</h3>
         </div>
-        <div id="infomenu-update" onclick="openInfo()">
-            <h3 id="ComputerMenuTitle">Computer</h3>
+
+        <div class="selectmenu" onclick="bauserUpdate()">
+            <div id="bausermenu"></div>
+            <h4 id="title-application-menu">Brawser</h4>
         </div>
-        <header id="controlmenu">
-            <nav>
-                <button onclick="closeareaDeTrabalhoUpdate()" class="default" id="exitbutton">exit</button>
-            </nav>
-        </header>
+
+        <div class="selectmenu" onclick="openExplorer()">
+            <div id="explorermenu"></div>
+            <h4 id="title-application-menu">Explorer</h4>
+        </div>
+
+        <div class="selectmenu" onclick="openInfo()">
+            <div id="infomenu"></div>
+            <h4 id="title-application-menu">Info</h4>
+        </div>
+
+        <hr></hr>
+
+        <div class="selectmenu" onclick="closeareaDeTrabalho()">
+            <div id="logoffmenu"></div>
+            <h4 id="title-application-menu">Log Off</h4>
+        </div>
+
+        <div class="selectmenu" onclick="showAfterDown()">
+            <div id="shutdownmenu"></div>
+            <h4 id="title-application-menu">Shut Down</h4>
+        </div>
     </div>
-    <div id="notepedj-txt">
+
+    <div id="notepedj-txt" class="window">
         <div class="title-bar">
             <div class="title-bar-text">noteped.exe</div>
             <div class="title-bar-controls">
                 <button aria-label="Close" onclick="closeNotepedJ()">X</button>
             </div>
         </div>
-        <textarea id="textarea-noteped" readonly spellcheck="false">
+        <div class="window-body">
+            <textarea id="textarea-noteped" readonly spellcheck="false">
 ???????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????
 ???????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????
 ???????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????
@@ -1139,7 +1151,8 @@
 ???????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????
 01100001 01101110 01110100 01101001 01110110 01100001 01110010 01101001 01101111 01110011 00110001 00110010 00110011 01100101 01111000 01100101 01100011 01110101 01110100 01100101
 brawser terminal doc...?
-        </textarea>
+            </textarea>
+        </div>
     </div>
 
     <div id="antivarios-assistent"></div>
