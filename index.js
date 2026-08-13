@@ -51,6 +51,7 @@ function showAfterDown() {
 }
 
 function areaDeTrabalho() {
+	document.getElementById("info-update-button").style = "none";
 	document.getElementById("janela-login-update").style.display = "none";
 	document.getElementById("logar-update").style.display = "none";
 	document.getElementById("others-login-update").style.display = "none";
@@ -250,6 +251,8 @@ function windefaultwallpaper() {
 function openExplorer() {
 	var explorer = document.getElementById("explorer");
 	explorer.style.display = "block";
+	document.getElementById("menu").style.display = "none";
+	document.getElementById("menu-update").style.display = "none";
 }
 
 function closeExplorer() {
@@ -328,6 +331,7 @@ function updatemandows() {
 }
 
 function updatemandows98login() {
+	document.getElementById("info-update-button").style = "block";
     document.getElementById("logar").style.display = "none";
     document.getElementById("janela-login").style.display = "none";
 	document.getElementById("update-info").style.display = "block";
@@ -358,7 +362,12 @@ function closeuic() {
 	document.getElementById("update-info").style.display = "none";
 }
 
+function openic() {
+	document.getElementById("update-info").style.display = "block";
+}
+
 function areaDeTrabalhoUpdate()  {
+	document.getElementById("info-update-button").style = "none";
 	document.getElementById("janela-login-update").style.display = "none";
 	document.getElementById("logar-update").style.display = "none";
 	document.getElementById("others-login-update").style.display = "none";
@@ -401,6 +410,7 @@ function closeareaDeTrabalhoUpdate() {
 	document.getElementById("janela-login-update").style.display = "block";
 	document.getElementById("logar-update").style.display = "block";
 	document.getElementById("others-login-update").style.display = "block";
+	document.getElementById("info-update-button").style = "block";
 	document.getElementById("bar").style.display = "none";
 	document.getElementById("start-update").style.display = "none";
 	document.getElementById("closemenu").style.display = "none";
@@ -418,6 +428,7 @@ function closeareaDeTrabalhoUpdate() {
 	document.getElementById("customizationj").style.display = "none";
 	document.getElementById("currentTime-back").style.display = "none";
 	document.getElementById("AppUnlocker").style.display = "none";
+	document.getElementById("currentTime-back").style.display = "none";
 }
 
 function showTime() {
