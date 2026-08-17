@@ -1,7 +1,8 @@
-<h1 align="center">🖥️ ManDows 98</h1>
+<h1 align="center">🖥️ ManDows 98 <sup>[WIP]</sup></h1>
 
 <p align="center">
-  <i>An "operating system" that should never have been turned on.</i>
+  <i>An "operating system" that should never have been turned on.</i><br/>
+  <sub>⚠️ This project is a <b>Work In Progress</b>. Things are incomplete, broken, or unfinished. That's the point (sort of).</sub>
 </p>
 
 ---
@@ -12,6 +13,8 @@
 You boot up, explore, solve puzzles, browse the (somewhat broken) internet, and try to survive an antivirus that clearly has ulterior motives.
 
 > ⚠️ No real PC was harmed. The jumpscare is silent. Probably.
+
+> 🚧 **This project is incomplete.** If you find bugs, have ideas, or want to contribute, feel free to open an issue or reach out!
 
 ---
 
@@ -46,20 +49,29 @@ You boot up, explore, solve puzzles, browse the (somewhat broken) internet, and 
 | Field | Info |
 |-------|------|
 | **Current version** | `1.0.5b` *(b = beta)* |
-| **Status** | In active development |
+| **Status** | Work In Progress (WIP) |
 | **Platform** | *(add here: Windows / Web / etc.)* |
 
 ---
 
-## 👤 Credits
+## 🚀 Installation
 
-| | |
-|---|---|
-| **Creator** | MP3 |
-| **Team** | [SingularyStudios](https://singularystudios.vercel.app) |
+### Prerequisites
 
-> Made by one person, fueled by coffee and hatred for Windows Update.
+- [Node.js](https://nodejs.org/) (v16+ recommended)
+- npm (comes bundled with Node.js)
 
----
+### Quick Start
 
-## 🚀 How to run *(if applicable)*
+```bash
+# Clone the repository
+git clone https://github.com/YOUR_USERNAME/manDows98.git
+
+# Enter the project folder
+cd manDows98
+
+# Install dependencies
+npm install
+
+# Run the game
+npm start
