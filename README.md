@@ -110,11 +110,26 @@ npm install
 # Run the game
 npm start</code></pre>
 
-<h3>Troubleshooting — Clean Install (Windows)</h3>
-<p>If you run into weird dependency issues, broken packages, or just want a fresh start, delete <code>node_modules</code> and <code>package-lock.json</code>, then reinstall:</p>
+<h3>Troubleshooting — Clean Install</h3>
+<p>If you run into weird dependency issues, broken packages, or just want a fresh start, delete <code>node_modules</code> and <code>package-lock.json</code>, then reinstall. Choose your OS below:</p>
 
+<h4>🪟 Windows</h4>
 <pre><code class="powershell"># Delete node_modules folder and package-lock.json
 rmdir /s /q node_modules && del package-lock.json
+
+# Reinstall everything from scratch
+npm install</code></pre>
+
+<h4>🐧 Linux</h4>
+<pre><code class="bash"># Delete node_modules folder and package-lock.json
+rm -rf node_modules package-lock.json
+
+# Reinstall everything from scratch
+npm install</code></pre>
+
+<h4>🍎 macOS</h4>
+<pre><code class="bash"># Delete node_modules folder and package-lock.json
+rm -rf node_modules package-lock.json
 
 # Reinstall everything from scratch
 npm install</code></pre>
