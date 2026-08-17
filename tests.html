@@ -53,6 +53,21 @@
             left: 0.5%;
             }
         }
+    #error-j {
+        text-align: center;
+        position: absolute;
+        top: 15%;
+        left: 25%;
+        z-index: 1;
+        display: block;
+        overflow: hidden;
+        width: 350px;
+        height: 280px;
+    }
+    .window-body{
+        height: 33%;
+        overflow: auto !important;        
+    }
         #bausermenu{ width: 3vw; height: 6vh; position: relative; left: 15%; top: 20%; background-image: url("./Windows98Scaled/Windows98Scaled Icon 04.ico"); background-size: 100% 100%; display: grid; align-items: center; place-items: center; }
         #infomenu{ width: 3vw; height: 6vh; position: relative; left: 15%; top: 20%; background-image: url("./Windows98Scaled/Windows98Scaled Icon 02.ico"); background-size: 100% 100%; display: grid; align-items: center; place-items: center; }
         #explorermenu{ width: 3vw; height: 6vh; position: relative; left: 15%; top: 20%; background-image: url("./Windows98Scaled/Windows98Scaled Icon 01.ico"); background-size: 100% 100%; display: grid; align-items: center; place-items: center; }
@@ -60,6 +75,23 @@
         #shutdownmenu{ width: 3vw; height: 6vh; position: relative; left: 15%; top: 20%; background-image: url("./Windows98Scaled/Windows98Scaled Icon 17.ico"); background-size: 100% 100%; display: grid; align-items: center; place-items: center; }
         #title-application-menu{ font-size: 20px; position: relative; left: 100%; top: -60%; transform: translate(-50%, -50%); font-size: 1.5vw; }
     </style>
+    <div id="error-j" class="window">
+        <div class="title-bar" style="position: fixed;">
+            <div class="title-bar-text">system.exe</div>
+            <div class="title-bar-controls">
+            <button aria-label="Close" onclick="closeTerminalJ()">X</button>
+        </div>
+        </div>
+        <div class="window-body">
+            <div id="error-win-icon"></div>
+            <h3>Error 303</h3>
+            <h2>Our system detected something wrong.</h2>
+            <h3 id="updatetitle33123">Looking for updates...</h3>
+            <h3 id="updatetitlefoud" style="display: none;">update found!</h3>
+            <button onclick="updatemandows()" id="updatebutton33123antivarios" style="margin: auto; display: none;" class="default">Update</button>
+        </div>
+    </div>
+
     <div id="menu" class="window">
         <div id="bordermenu">
             <h4 id="bordermenutext">Mandows 98</h3>
