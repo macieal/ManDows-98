@@ -65,10 +65,10 @@ You boot up, explore, solve puzzles, browse the (somewhat broken) internet, and 
 
 ```bash
 # Clone the repository
-git clone https://github.com/macieal/ManDows98.git
+git clone https://github.com/macieal/ManDows98
 
 # Enter the project folder
-cd manDows98
+cd ManDows98
 
 # Install dependencies
 npm install
