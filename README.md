@@ -56,7 +56,7 @@ You boot up, explore, solve puzzles, browse the (somewhat broken) internet, and 
 | | |
 |---|---|
 | **Creator** | MP3 |
-| **Team** | [SingularyStudios](#) |
+| **Team** | [SingularyStudios](https://singularystudios.vercel.app) |
 
 > Made by one person, fueled by coffee and hatred for Windows Update.
 
