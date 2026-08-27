@@ -499,15 +499,22 @@ function antivariosjabrirboras() {
 }
 
 function executorantivarios() {
+	document.getElementById("dialoguebar-antivarios").style.display = "grid";
+	document.getElementById("trash").style.pointerEvents = "none";
+	document.getElementById("Terminal-update").style.pointerEvents = "none";
+	document.getElementById("boras-update-unlocker").style.pointerEvents = "none";
+	document.getElementById("info-update").style.pointerEvents = "none";
+	document.getElementById("bauser-update").style.pointerEvents = "none";
+	document.getElementById("AppUnlocker").style.pointerEvents = "none";
+	document.getElementById("noteped-update").style.pointerEvents = "none";
+	document.getElementById("start-update").style.pointerEvents = "none";
+	document.getElementById("BakExplorerCloseButton").style.pointerEvents = "none";
+    document.getElementById("minigame-antivarios123").style.display = "none";
 	document.getElementById("jint").style.display = "block";
 	document.getElementById("browser").src = "Browser/antivariosgame.html";
-    const eb = document.getElementById("exitbutton");
     document.getElementById("antivarios-assistent").style.display = "block";
-    eb.disabled = true;
-    document.getElementById("minigame-antivarios123").style.display = "none";
-	blockedsystemusedupdate()
+    document.getElementById("exitbutton").disabled = true;
 	setTimeout(() => {
-		document.getElementById("dialoguebar-antivarios").style.display = "grid";
 		document.getElementById("dialoguebar-antivarios").innerText = "Antivarios:Hello dune...";
 	}, 2000);
 	setTimeout(() => {
@@ -554,7 +561,7 @@ function debughide() {
 	showdebugbutton()
 }
 
-function blockedsystemusedupdate() {
+/*function blockedsystemusedupdate() {
 	document.getElementById("trash").style.pointerEvents = "none";
 	document.getElementById("Terminal-update").style.pointerEvents = "none";
 	document.getElementById("boras-update-unlocker").style.pointerEvents = "none";
@@ -576,7 +583,7 @@ function unblockedsystemusedupdate() {
 	document.getElementById("noteped-update").style.pointerEvents = "auto";
 	document.getElementById("start-update").style.pointerEvents = "auto";
 	document.getElementById("BakExplorerCloseButton").style.pointerEvents = "auto";
-}
+}*/
 
 $( function() {
   $( ".window" ).draggable({

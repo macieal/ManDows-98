@@ -22,7 +22,6 @@ window.addEventListener('keydown', (event) => {
 window.addEventListener("message", (event) => {
     if (event.data?.elementId === "antivariosiniciargame") {
         text1();
-        console.log("dedada!");
     }
 });
 
