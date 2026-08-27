@@ -15,7 +15,7 @@
 <h1 align="center">🖥️ ManDows 98 <sup>[WIP]</sup></h1>
 
 <p align="center">
-  <img src="https://placehold.co/800x450/000000/00FF00?text=ManDows+98+%E2%80%94+Screenshot+Coming+Soon" alt="ManDows 98 screenshot" width="720" />
+  <img src="./image.png" alt="ManDows 98 screenshot" width="720" />
 </p>
 
 <p align="center">
