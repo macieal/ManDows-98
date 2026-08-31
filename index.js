@@ -1,4 +1,5 @@
 showdebugbutton()
+
 console.log("Please leave so you don't cheat. >:(")
 
 document.addEventListener('contextmenu', event => event.preventDefault());
@@ -371,6 +372,7 @@ function areaDeTrabalhoUpdate()  {
 	document.getElementById("janela-login-update").style.display = "none";
 	document.getElementById("logar-update").style.display = "none";
 	document.getElementById("others-login-update").style.display = "none";
+	document.getElementById("update-info").style.display = "none";
 	setTimeout(() => {
 		document.getElementById("trash").style.display = "block";
 		document.getElementById("boras-icon-bar").style.display = "none";
@@ -499,21 +501,13 @@ function antivariosjabrirboras() {
 }
 
 function executorantivarios() {
-	document.getElementById("dialoguebar-antivarios").style.display = "grid";
-	document.getElementById("trash").style.pointerEvents = "none";
-	document.getElementById("Terminal-update").style.pointerEvents = "none";
-	document.getElementById("boras-update-unlocker").style.pointerEvents = "none";
-	document.getElementById("info-update").style.pointerEvents = "none";
-	document.getElementById("bauser-update").style.pointerEvents = "none";
-	document.getElementById("AppUnlocker").style.pointerEvents = "none";
-	document.getElementById("noteped-update").style.pointerEvents = "none";
-	document.getElementById("start-update").style.pointerEvents = "none";
-	document.getElementById("BakExplorerCloseButton").style.pointerEvents = "none";
     document.getElementById("minigame-antivarios123").style.display = "none";
 	document.getElementById("jint").style.display = "block";
-	document.getElementById("browser").src = "Browser/antivariosgame.html";
     document.getElementById("antivarios-assistent").style.display = "block";
-    document.getElementById("exitbutton").disabled = true;
+    document.getElementById("BakExplorerCloseButton").disabled = true;
+	blockedsystemusedupdate();
+	document.getElementById("browser").src = "Browser/antivariosgame.html";
+    document.getElementById("dialoguebar-antivarios").style.display = "grid";
 	setTimeout(() => {
 		document.getElementById("dialoguebar-antivarios").innerText = "Antivarios:Hello dune...";
 	}, 2000);
@@ -525,6 +519,19 @@ function executorantivarios() {
 				document.getElementById("dialoguebar-antivarios").innerText = "Scanning Applications..";
 				setTimeout(() => {
 					document.getElementById("dialoguebar-antivarios").innerText = "Scanning Applications...";
+					setTimeout(() => {
+						document.getElementById("dialoguebar-antivarios").innerText = "Finishing verification...";
+						setTimeout(() => {
+							document.getElementById("dialoguebar-antivarios").innerText = "Oops... I just noticed your game isn't loading; I'll fix that!";
+							setTimeout(() => {
+								document.getElementById("TerminalJ").style.display = "block";
+								document.getElementById("Terminal-Iframe").src = "term-fix-game/bug-fix-game-term.html";
+								setTimeout(() => {
+									document.getElementById("TerminalJ").style.display = "none";
+								}, 16000);
+							}, 1000);
+						}, 2500);
+					}, 5000);
 				}, 3000);
 			}, 3000);
 		}, 3000);
@@ -561,7 +568,7 @@ function debughide() {
 	showdebugbutton()
 }
 
-/*function blockedsystemusedupdate() {
+function blockedsystemusedupdate() {
 	document.getElementById("trash").style.pointerEvents = "none";
 	document.getElementById("Terminal-update").style.pointerEvents = "none";
 	document.getElementById("boras-update-unlocker").style.pointerEvents = "none";
@@ -583,7 +590,7 @@ function unblockedsystemusedupdate() {
 	document.getElementById("noteped-update").style.pointerEvents = "auto";
 	document.getElementById("start-update").style.pointerEvents = "auto";
 	document.getElementById("BakExplorerCloseButton").style.pointerEvents = "auto";
-}*/
+}
 
 $( function() {
   $( ".window" ).draggable({

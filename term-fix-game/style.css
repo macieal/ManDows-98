@@ -9,7 +9,6 @@ body{
     background-color: black;
     color: white;
     margin: 0;
-    overflow: hidden;
     font-family:"VGA";
     font-size:16px;
     line-height:1.2;
@@ -20,7 +19,7 @@ body{
     -moz-user-select: none;
     -ms-user-select: none;
 }
-textarea{
+#Terminal{
     position: absolute;
     left: 50%;
     top: 52%;
@@ -34,15 +33,14 @@ textarea{
     font-family: "VGA";
     resize: none;
     outline: none;
-    overflow-y: hidden;
     overflow-x: hidden;
     user-select: none;
 }
-textarea:focus{
+#Terminal:focus{
     outline: none;
     border: none;
     box-shadow: none;
 }
-textarea::selection{
+#Terminal::selection{
     background: transparent;
 }
