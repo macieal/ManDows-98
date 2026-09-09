@@ -1,14 +1,14 @@
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow } = require("electron");
 
 const createWindow = () => {
   const win = new BrowserWindow({
     fullscreen: true,
-    frame: false
-  })
+    frame: false,
+  });
 
-  win.loadFile('index.html')
-}
+  win.loadFile("index.html");
+};
 
 app.whenReady().then(() => {
-  createWindow()
-})
+  createWindow();
+});
