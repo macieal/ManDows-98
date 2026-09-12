@@ -521,7 +521,7 @@ function executorantivarios() {
   }, 2000);
   setTimeout(() => {
     document.getElementById("dialoguebar-antivarios").innerText =
-      "Antivarios:I'm checking your computer while you play my game.";
+      "Antivarios:I'm checking your computer and building a questions app...";
     setTimeout(() => {
       document.getElementById("dialoguebar-antivarios").innerText =
         "Scanning Applications.";
@@ -536,7 +536,7 @@ function executorantivarios() {
               "Finishing verification...";
             setTimeout(() => {
               document.getElementById("dialoguebar-antivarios").innerText =
-                "Oops... I just noticed your game isn't loading; I'll fix that!";
+                "Antivarios:Oops... I just noticed your app isn't loading; I'll fix that!";
               setTimeout(() => {
                 document.getElementById("TerminalJ").style.display = "block";
                 document.getElementById("Terminal-Iframe").src =
@@ -545,6 +545,12 @@ function executorantivarios() {
                   "none";
                 setTimeout(() => {
                   document.getElementById("TerminalJ").style.display = "none";
+                  setTimeout(() => {
+                    document.getElementById(
+                      "dialoguebar-antivarios",
+                    ).innerText =
+                      "Antivarios:I think it's working now; let's start the questions.";
+                  }, 100);
                 }, 16000);
               }, 1000);
             }, 2500);

@@ -1,13 +1,13 @@
 function openAntiVariosd() {
-    document.getElementById("antivariosjdown").style.display = "block";
+  document.getElementById("antivariosjdown").style.display = "block";
 
-setTimeout(() => {
+  setTimeout(() => {
     document.getElementById("antivariosjdown").style.display = "none";
     document.getElementById("bolasquadradas").style.display = "none";
     document.getElementById("antivariosj").style.display = "grid";
-    window.top.postMessage({action: 'showElement', elementId: 'boras'}, '*');
-}, 5000);
-setTimeout(() => { 
+    window.top.postMessage({ action: "showElement", elementId: "boras" }, "*");
+  }, 5000);
+  setTimeout(() => {
     document.getElementById("antivariosj").style.display = "none";
-}, 10000);
+  }, 10000);
 }

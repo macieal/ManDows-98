@@ -1,3 +1,3 @@
-function abrirNotepad(){
-    window.parent.postMessage("abrir-notepad", "*")
+function abrirNotepad() {
+  window.parent.postMessage("abrir-notepad", "*");
 }

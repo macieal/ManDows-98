@@ -1,3 +1,6 @@
 function install() {
-    window.top.postMessage({action: 'showElement', elementId: 'appunlocker'}, '*');
+  window.top.postMessage(
+    { action: "showElement", elementId: "appunlocker" },
+    "*",
+  );
 }

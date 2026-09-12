@@ -1,8 +1,10 @@
-body{
-    overflow-x: hidden;
-    margin: 0%;
-    height: 100vh;
-    cursor: url('../../../Windows98Scaled/win-95-98/arrow.cur'), auto;
-    background-color: rgb(255, 255, 255);
+body {
+  overflow-x: hidden;
+  margin: 0%;
+  height: 100vh;
+  cursor: url("../../../Windows98Scaled/win-95-98/arrow.cur"), auto;
+  background-color: rgb(255, 255, 255);
 }
-button{ cursor: url('../../../Windows98Scaled/win-95-98/arrow.cur'), auto; }
+button {
+  cursor: url("../../../Windows98Scaled/win-95-98/arrow.cur"), auto;
+}
