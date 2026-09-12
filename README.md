@@ -144,6 +144,7 @@ npm install</code></pre>
 
 <table>
   <tbody>
+    <tr><td><strong>Inspired</strong></td><td>Rafa/tatu</td></tr>
     <tr><td><strong>Creator</strong></td><td>MP3</td></tr>
     <tr><td><strong>Team</strong></td><td>SingularyStudios</td></tr>
   </tbody>
