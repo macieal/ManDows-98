@@ -150,7 +150,7 @@ npm install</code></pre>
   </tbody>
 </table>
 
-<h2>Game inpired: Virus attacked</h2>
+<h2>👥️ Game inpired: Virus attacked</h2>
 <a href="https://yorkonthe.net/projeto/virusattacked">Page game</a>
 <br>
 <a href="https://mega.nz/file/QvI2AIaJ#mb-TFXq8zEcta3SItL1EG6plAXV358aZQE7YsBSvTTI">Download Virus attacked</a>
