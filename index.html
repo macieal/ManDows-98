@@ -318,9 +318,8 @@
         width: 5vw;
         height: 15vh;
         position: absolute;
-        top: 50%;
-        left: 7%;
-        transform: translate(-50%, -50%);
+        top: 70%;
+        left: 9%;
         z-index: 9999999999999999999999999999999999999999999999999999999999999999;
         border: solid 0.1vw black;
         background-position: 50%, 50%;
@@ -898,25 +897,22 @@
         top: 1%;
       }
       #dialoguebar-antivarios {
-        align-items: center;
-        place-items: center;
         color: white;
         font-size: 1.5vw;
-        position: fixed;
-        transform: translate(-50%, -50%);
-        top: 35%;
-        left: 7.5%;
+        position: absolute;
+        top: 0%;
+        left: 8.5%;
         border: none;
         background-color: black;
-        width: 15%;
+        width: 100%;
         height: 10vh;
         display: none;
         align-items: center;
         place-items: center;
         z-index: 9999999999;
         border-radius: 0.5vw;
-        overflow: hidden;
       }
+
       #info-update-button {
         background-color: white;
         position: absolute;
@@ -926,6 +922,13 @@
         top: 1%;
         color: black;
         font-family: Arial, sans-serif;
+      }
+      .antivarios-components {
+        position: absolute;
+        left: 64px;
+        top: 140px;
+        width: 40vw;
+        height: 20vh;
       }
     </style>
   </head>
@@ -1171,7 +1174,7 @@
       <div class="window-body">
         <div id="error-win-icon"></div>
         <h3>Error 303</h3>
-        <h2>Our system detected something wrong.</h2>
+        <h2 id="updatetitle22">Our system detected something wrong.</h2>
         <h3 id="updatetitle33123">Looking for updates...</h3>
         <h3 id="updatetitlefoud" style="display: none">update found!</h3>
         <button
@@ -1630,8 +1633,10 @@ brawser terminal doc...?
       </div>
     </div>
 
-    <div id="antivarios-assistent"></div>
-    <div id="dialoguebar-antivarios"></div>
+    <div class="antivarios-components">
+      <div id="antivarios-assistent" class="dav2"></div>
+      <div id="dialoguebar-antivarios" class="dav"></div>
+    </div>
 
     <div id="loading-antivarios-unlocked">
       <div id="icon-unlocked-app"></div>

@@ -128,12 +128,14 @@ function error33123antivarios() {
   document.getElementById("info-icon-bar").style.display = "none";
   document.getElementById("AppUnlocker-icon-bar").style.display = "none";
   document.getElementById("trash-icon-bar").style.display = "none";
+  document.getElementById("currentTime-back").style.display = "none";
   setTimeout(() => {
     const audio = new Audio("./songs/erro.mp3");
     audio.play();
     document.getElementById("error-j").style.display = "block";
   }, 5000);
   setTimeout(() => {
+    document.getElementById("updatetitle22").style.display = "none";
     document.getElementById("updatetitle33123").style.display = "none";
     document.getElementById("updatetitlefoud").style.display = "block";
     document.getElementById("updatebutton33123antivarios").style.display =
@@ -622,5 +624,13 @@ $(function () {
     handle: ".title-bar",
     scroll: false,
     cursor: "move",
+    containment: "window"
+  });
+});
+
+$(function () {
+  $(".antivarios-components").draggable({
+    scroll: false,
+    cursor: "move"
   });
 });

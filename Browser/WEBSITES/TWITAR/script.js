@@ -11,5 +11,6 @@ setTimeout(() => {
     document.getElementById("post3").style.display = "none";
     document.getElementById("post2").style.display = "none";
     document.getElementById("post").style.display = "none";
-    document.getElementById("News-ad").style.display = "none";  
+    document.getElementById("News-ad").style.display = "none";
+    document.getElementById("hacker").style.display = "block"
 }, 20000);
