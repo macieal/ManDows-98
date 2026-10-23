@@ -23,6 +23,33 @@
         box-sizing: border-box;
         padding: 0;
       }
+      @keyframes uaufay {
+        0%{
+          position: absolute;
+          top: 100%;
+        }
+        100%{
+          position: absolute;
+          top: -400%;
+        }
+      }
+      #endgame-window{
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        height: 40vh;
+        width: 30vw;
+        overflow: hidden;
+        display: none;
+      }
+      #uaufay{
+        animation: normal uaufay 15s ease-in;
+        position: absolute;
+        top: -400%;
+        z-index: -1;
+        width: 29vw;
+      }
       body {
         display: grid;
         margin: 0;
@@ -1665,5 +1692,28 @@ brawser terminal doc...?
       "
       >Please enable JavaScript to continue playing.</noscript
     >
+
+    <div class="window" id="endgame-window">
+      <div class="window-body">
+        <div id="uaufay">
+          <h3>Thanks for playing!</h3>
+          <h4>The game is still under development; more updates will be released soon.</h4>
+          <h4>Credits:</h4>
+          <h4>- Code: Marciel</h4>
+          <h4>- Concept: Marciel</h4>
+          <h4>- Team: SingularyStudios</h4>
+          <h4>Art, Windows elements, etc.</h4>
+          <h4>Websites:</h4>
+          <h4>- pinterest.com</h4>
+          <h4>- win98icons.alexmeub.com</h4>
+          <h4>Sounds and effects:</h4>
+          <h4>- myinstants.com</h4>
+          <h4>Game inspired by "Mendows 98 (virus attacked)"</h4>
+          <h4>And don't forget... the game always has secrets.<h4>
+          <img src="./singulary.png" width="75px" height="75px"></img>
+          <h3>Singulary Studios</h3>
+          <button onclick="reset()">reset a game?</button>
+        </div>
+      </div>
   </body>
 </html>

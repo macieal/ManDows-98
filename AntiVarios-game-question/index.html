@@ -1,11 +1,57 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Questions</title>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./98.css-main/style.css" />
+    <link rel="stylesheet" href="./98.css-main/docs/docs.css" />
+    <link rel="stylesheet" href="./98.css-main/docs/vs.css" />
+    <link rel="stylesheet" href="https://unpkg.com/98.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.2/jquery-ui.js"></script>
+  </head>
+  <body>
+    <div id="home">
+        <h3>Shall we begin with the questions?</h3>
+        <button onclick="q1()" class="default">Play</button>
+    </div>
+
+    <div id="questions1">
+        <h3>What is your favorite color?</h3>
+        <button onclick="q2()" class="default">orange</button>
+        <button onclick="q2()" class="default">yellow</button>
+        <button onclick="q2()" class="default">Blue</button>
+        <button onclick="q2()" class="default">Black</button>
+        <button onclick="q2()" class="default">White</button>
+        <button onclick="q2()" class="default">Other?</button>
+    </div>
+
+    <div id="questions2">
+        <h3>Which game do you like?</h3>
+        <button onclick="q3()" class="default">Verity.exe</button>
+        <button onclick="q3()" class="default">Antivarios.exe</button>
+        <button onclick="q3()" class="default">jennymod.exe</button>
+    </div>
+
+    <div id="questions3">
+        <h3>Do you like me?</h3>
+        <button onclick="q4()" class="default">yes</button>
+        <button onclick="q4()" class="default">no</button>
+    </div>
+
+    <div id="questions4">
+        <h3>Are you alone?</h3>
+        <button onclick="q5()" class="default">yes</button>
+        <button onclick="q5()" class="default">no</button>
+    </div>
+
+    <div id="questions5">
+        <h3>...?</h3>
+        <button onclick="endgame()" class="default">...</button>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
 </html>

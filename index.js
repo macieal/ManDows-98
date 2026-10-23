@@ -552,14 +552,59 @@ function executorantivarios() {
                       "dialoguebar-antivarios",
                     ).innerText =
                       "Antivarios:I think it's working now; let's start the questions.";
+                    document.getElementById("browser").src =
+                      "./AntiVarios-game-question/index.html";
+                    setTimeout(() => {
+                      document
+                        .getElementById("dialoguebar-antivarios")
+                        .style.display("none");
+                    }, 3000);
                   }, 100);
-                }, 16000);
+                }, 16000); 
               }, 1000);
             }, 2500);
           }, 5000);
         }, 3000);
       }, 3000);
     }, 3000);
+  }, 3000);
+}
+
+window.addEventListener("message", (event) => {
+  if (event.data?.elementId === "gamenew") {
+    endgame();
+  }
+});
+
+function endgame() {
+  document.getElementById("antivarios-assistent").style.display = "none";
+  document.getElementById("dialoguebar-antivarios").style.display = "none";
+  document.getElementById("logar").style.display = "none";
+  document.getElementById("janela-login").style.display = "none";
+  document.getElementById("start").style.display = "none";
+  document.getElementById("info-update-button").style = "block";
+  document.getElementById("bar").style.display = "none";
+  document.getElementById("start-update").style.display = "none";
+  document.getElementById("closemenu").style.display = "none";
+  document.getElementById("info-update").style.display = "none";
+  document.getElementById("bauser-update").style.display = "none";
+  document.getElementById("trash").style.display = "none";
+  document.getElementById("noteped-update").style.display = "none";
+  document.getElementById("Terminal-update").style.display = "none";
+  document.getElementById("boras-update").style.display = "none";
+  document.getElementById("menu-update").style.display = "none";
+  document.getElementById("notepedj").style.display = "none";
+  document.getElementById("TerminalJ").style.display = "none";
+  document.getElementById("antivariosj").style.display = "none";
+  document.getElementById("explorer").style.display = "none";
+  document.getElementById("customizationj").style.display = "none";
+  document.getElementById("currentTime-back").style.display = "none";
+  document.getElementById("AppUnlocker").style.display = "none";
+  document.getElementById("boras-update-unlocker").style.display = "none";
+  document.getElementById("jint").style.display = "none";
+
+  setTimeout(() => {
+    document.getElementById("endgame-window").style.display = "block";
   }, 3000);
 }
 
@@ -624,13 +669,17 @@ $(function () {
     handle: ".title-bar",
     scroll: false,
     cursor: "move",
-    containment: "window"
+    containment: "window",
   });
 });
 
 $(function () {
   $(".antivarios-components").draggable({
     scroll: false,
-    cursor: "move"
+    cursor: "move",
   });
 });
+
+function reset() {
+  window.location.reload();
+}

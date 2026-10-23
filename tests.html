@@ -4,206 +4,68 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://unpkg.com/98.css" />
-  </head>
-  <body>
     <style>
-      body {
-        background-color: gray;
-        overflow: hidden;
-      }
-      #menu {
-        z-index: 99;
-        width: 17vw;
-        height: 60vh;
-        background-color: rgba(195, 195, 195);
-        position: absolute;
-        top: 44%;
-        left: 0.5%;
-        border: solid 0.1vw black;
-        color: black;
-        overflow: hidden;
-        animation: alternate enter 1s;
-      }
-      #bordermenu {
-        position: absolute;
-        left: 0%;
-        top: 0%;
-        width: 10%;
-        height: 57vh;
-        background: linear-gradient(40deg, blue, rgb(0, 0, 128));
-      }
-      #bordermenutext {
-        width: 20vw;
-        color: white;
-        transform: rotate(-90deg);
-        position: absolute;
-        left: -525%;
-        top: 45%;
-        display: inline;
-        font-size: 1vw;
-      }
-      .selectmenu {
-        width: 100%;
-        height: 9vh;
-        background-color: rgb(189, 189, 189);
-        margin-top: 10px;
-      }
-      .selectmenu:hover {
-        background-color: rgb(0, 0, 190);
-        color: white;
-      }
-      @keyframes enter {
-        0% {
+      @keyframes uaufay {
+        0%{
           position: absolute;
           top: 100%;
-          left: 0.5%;
         }
-        100% {
+        100%{
           position: absolute;
-          top: 44%;
-          left: 0.5%;
+          top: -300%;
         }
       }
-      #error-j {
-        text-align: center;
-        position: absolute;
-        top: 15%;
-        left: 25%;
-        z-index: 1;
-        display: block;
-        overflow: hidden;
-        width: 350px;
-        height: 280px;
-      }
-      .window-body {
-        height: 33%;
-        overflow: auto !important;
-      }
-      #bausermenu {
-        width: 3vw;
-        height: 6vh;
-        position: relative;
-        left: 15%;
-        top: 20%;
-        background-image: url("./Windows98Scaled/Windows98Scaled Icon 04.ico");
-        background-size: 100% 100%;
-        display: grid;
-        align-items: center;
-        place-items: center;
-      }
-      #infomenu {
-        width: 3vw;
-        height: 6vh;
-        position: relative;
-        left: 15%;
-        top: 20%;
-        background-image: url("./Windows98Scaled/Windows98Scaled Icon 02.ico");
-        background-size: 100% 100%;
-        display: grid;
-        align-items: center;
-        place-items: center;
-      }
-      #explorermenu {
-        width: 3vw;
-        height: 6vh;
-        position: relative;
-        left: 15%;
-        top: 20%;
-        background-image: url("./Windows98Scaled/Windows98Scaled Icon 01.ico");
-        background-size: 100% 100%;
-        display: grid;
-        align-items: center;
-        place-items: center;
-      }
-      #logoffmenu {
-        width: 3vw;
-        height: 6vh;
-        position: relative;
-        left: 15%;
-        top: 20%;
-        background-image: url("./Windows98Scaled/Windows98Scaled Icon 15.ico");
-        background-size: 100% 100%;
-        display: grid;
-        align-items: center;
-        place-items: center;
-      }
-      #shutdownmenu {
-        width: 3vw;
-        height: 6vh;
-        position: relative;
-        left: 15%;
-        top: 20%;
-        background-image: url("./Windows98Scaled/Windows98Scaled Icon 17.ico");
-        background-size: 100% 100%;
-        display: grid;
-        align-items: center;
-        place-items: center;
-      }
-      #title-application-menu {
-        font-size: 20px;
-        position: relative;
-        left: 100%;
-        top: -60%;
+      #endgame-window{
+        position: fixed;
+        left: 50%;
+        top: 50%;
         transform: translate(-50%, -50%);
-        font-size: 1.5vw;
+        height: 40vh;
+        width: 30vw;
+        overflow: hidden;
+        place-items: center;
+      }
+      #uaufay{
+        animation: normal uaufay 10s ease-in;
+        position: absolute;
+        top: -300%;
+        z-index: -1;
+        width: 29vw;
       }
     </style>
-    <div id="error-j" class="window">
-      <div class="title-bar" style="position: fixed">
-        <div class="title-bar-text">system.exe</div>
+  </head>
+  <body>
+    <div class="window" id="endgame-window">
+      <div class="title-bar">
+        <div class="title-bar-text">sysmtem.exe</div>
         <div class="title-bar-controls">
-          <button aria-label="Close" onclick="closeTerminalJ()">X</button>
+          <button aria-label="Minimize"></button>
+          <button aria-label="Maximize"></button>
+          <button aria-label="Close"></button>
         </div>
       </div>
       <div class="window-body">
-        <div id="error-win-icon"></div>
-      <h3>Error 303</h3>
-        <h2>Our system detected something wrong.</h2>
-        <h3 id="updatetitle33123">Looking for updates...</h3>
-        <h3 id="updatetitlefoud" style="display: none">update found!</h3>
-        <button
-          onclick="updatemandows()"
-          id="updatebutton33123antivarios"
-          style="margin: auto; display: none"
-          class="default"
-        >
-          Update
-        </button>
-      </div>
-    </div>
+        <div id="uaufay">
+          <h3>Thanks for playing!</h3>
+          <h4>The game is still under development; more updates will be released soon.</h4>
+          <h4>Credits:</h4>
+          <h4>- Code: Marciel</h4>
+          <h4>- Concept: Marciel</h4>
+          <h4>- Team: SingularyStudios</h4>
+          <h4>Art, Windows elements, etc.</h4>
+          <h4>Websites:</h4>
+          <h4>- pinterest.com</h4>
+          <h4>- win98icons.alexmeub.com</h4>
+          <h4>Sounds and effects:</h4>
+          <h4>- myinstants.com</h4>
+          <h4>Game inspired by "Mendows 98 (virus attacked)"</h4>
+          <h4>And don't forget... the game always has secrets.<h4>
+          <img src="./singulary.png" width="75px" height="75px"></img>
+          <h3>Singulary Studios</h3>
+          <button onclick="reset()">reset a game?</button>
+        </div>
 
-    <div id="menu" class="window">
-      <div id="bordermenu">
-        <h4 id="bordermenutext">Mandows 98</h4>
       </div>
-
-      <div class="selectmenu" onclick="bauser()">
-        <div id="bausermenu"></div>
-        <h4 id="title-application-menu">Brawser</h4>
-      </div>
-
-      <div class="selectmenu" onclick="openExplorer()">
-        <div id="explorermenu"></div>
-        <h4 id="title-application-menu">Explorer</h4>
-      </div>
-
-      <div class="selectmenu" onclick="openInfo()">
-        <div id="infomenu"></div>
-        <h4 id="title-application-menu">Info</h4>
-      </div>
-
-      <hr />
-
-      <div class="selectmenu" onclick="closeareaDeTrabalho()">
-        <div id="logoffmenu"></div>
-        <h4 id="title-application-menu">Log Off</h4>
-      </div>
-
-      <div class="selectmenu" onclick="showAfterDown()">
-        <div id="shutdownmenu"></div>
-        <h4 id="title-application-menu">Shut Down</h4>
-      </div>
-    </div>
   </body>
 </html>
 
