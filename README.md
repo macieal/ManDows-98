@@ -81,7 +81,7 @@ You boot up, explore, solve puzzles, browse a (somewhat broken) internet, and tr
 <table>
   <tbody>
     <tr><th>Field</th><th>Info</th></tr>
-    <tr><td><strong>Current version</strong></td><td><code>1.0.5b</code> <em>(b = beta)</em></td></tr>
+    <tr><td><strong>Current version</strong></td><td><code>1.2b</code> <em>(b = beta)</em></td></tr>
     <tr><td><strong>Status</strong></td><td>Work In Progress (WIP)</td></tr>
     <tr><td><strong>Platform</strong></td><td><em>(add here: Windows / Web / etc.)</em></td></tr>
   </tbody>
@@ -173,24 +173,6 @@ npm install</code></pre>
   <li>[ ] More apps in the Minocroft Store</li>
   <li>[ ] ???</li>
 </ul>
-
-<hr/>
-
-<h2>🤝 Contributing</h2>
-
-<p>This is a solo project, but I'm open to suggestions, bug reports, and help!</p>
-
-<ul>
-  <li>Found a bug? → <a href="../../issues">Open an Issue</a></li>
-  <li>Have an idea? → <a href="../../discussions">Start a Discussion</a></li>
-  <li>Want to help code? → Fork, branch, and open a Pull Request</li>
-</ul>
-
-<hr/>
-
-<h2>📜 License</h2>
-
-<p>This project is under the <strong>MIT</strong> license — feel free to look at the code, but don't blame Antivarios if it shows up on your desktop.</p>
 
 <hr/>
 
