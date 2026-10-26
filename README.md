@@ -6,7 +6,7 @@
 <body>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/version-1.0.5b--beta-orange?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/version-1.2b--beta-orange?style=for-the-badge" />
   <img src="https://img.shields.io/badge/status-WIP-red?style=for-the-badge" />
   <img src="https://img.shields.io/badge/team-SingularyStudios-blueviolet?style=for-the-badge" />
   <img src="https://img.shields.io/badge/genre-horror%20%7C%20puzzle-black?style=for-the-badge" />
