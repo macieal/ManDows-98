@@ -181,5 +181,10 @@ npm install</code></pre>
   <sub>No mandatory updates were installed during the making of this README.</sub>
 </p>
 
+<p align="center">
+  <b>ManDows 98 [WIP]</b> © 2025 — SingularyStudios<br/>
+  <sub>No mandatory updates were installed during the making of this README.</sub>
+</p>
+
 </body>
 </html>
