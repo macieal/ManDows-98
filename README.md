@@ -176,10 +176,11 @@ npm install</code></pre>
 
 <hr/>
 
-<p align="center">
-  <b>ManDows 98 [WIP]</b> © 2025 — SingularyStudios<br/>
-  <sub>No mandatory updates were installed during the making of this README.</sub>
-</p>
+<h2>📜 License</h2>
+
+<p>This project is under the <strong>GNU GENERAL PUBLIC LICENSE</strong> license — feel free to look at the code, but don't blame Antivarios if it shows up on your desktop.</p>
+
+<hr/>
 
 <p align="center">
   <b>ManDows 98 [WIP]</b> © 2025 — SingularyStudios<br/>
