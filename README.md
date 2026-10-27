@@ -99,7 +99,7 @@ You boot up, explore, solve puzzles, browse a (somewhat broken) internet, and tr
 
 <h3>Quick Start</h3>
 <pre><code class="bash"># Clone the repository
-git clone https://github.com/macieal/ManDows98.git
+git clone https://github.com/macieal/ManDows-98.git
 
 # Enter the project folder
 cd ManDows98
