@@ -82,7 +82,6 @@ You boot up, explore, solve puzzles, browse a (somewhat broken) internet, and tr
   <tbody>
     <tr><th>Field</th><th>Info</th></tr>
     <tr><td><strong>Current version</strong></td><td><code>1.2b</code> <em>(b = beta)</em></td></tr>
-    <tr><td><strong>Status</strong></td><td>Work In Progress (WIP)</td></tr>
     <tr><td><strong>Platform</strong></td><td><em>(add here: Windows / Web / etc.)</em></td></tr>
   </tbody>
 </table>
