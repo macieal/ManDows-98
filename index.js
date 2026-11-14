@@ -1,4 +1,4 @@
-showdebugbutton();
+hidedebugbutton(); // ou showdebugbutton(); para habilitar o debug
 
 console.log("Please leave so you don't cheat. >:(");
 
